@@ -14,9 +14,9 @@ const About = () => {
   // Add your photos here
   const photos = [
     '/samudu.jpg',
-    '/photo1.jpg',
-    '/photo2.jpg',
-    '/photo3.jpg'
+    '/My1.jpg',
+    '/My2.jpg',
+    '/My3.jpg'
   ];
 
   // Auto slide effect

@@ -1,24 +1,78 @@
-// src/data/projects.js
+// src/Data/Projects.js
 
 export const projects = [
   {
-    title: "E-Commerce Platform",
-    subtitle: "MERN Stack",
+    id: "project-1",
+    title: "IPD Health Hub",
+    subtitle: "PHP & MySQL",
     description:
-      "A full-featured e-commerce site with user authentication, product catalog, shopping cart, and a payment gateway. Built to practice full-stack development principles.",
-    image: "https://via.placeholder.com/300", // Replace with your project image
-    technologies: ["React", "Node.js", "Express", "MongoDB"],
-    link: "#", // Replace with your live demo link
-    source: "#", // Replace with your source code link
+      "A comprehensive healthcare management system that streamlines patient care and hospital operations. Features include doctor appointment scheduling, real-time bed availability tracking, pharmacy inventory management, and secure payment processing.",
+    image: "/Ipd.png", // Replace with actual project image
+    technologies: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "Bootstrap"],
+ 
+    source: "https://github.com/yourusername/ipd-health", // Replace with actual repo link
+    category: "Web Development",
+    status: "live",
+    features: [
+      "Doctor appointment scheduling",
+      "Real-time bed availability tracking",
+      "Pharmacy inventory management",
+      "Secure payment integration",
+      "Patient portal dashboard",
+    ],
+    timeline: {
+      start: "January 2023",
+      end: "April 2023",
+      duration: "4 months",
+    },
   },
   {
+    id: "project-2",
     title: "Personal Portfolio Website",
     subtitle: "React & Vite",
     description:
-      "A responsive personal portfolio built from scratch to showcase my skills and projects. Optimized for fast-loading and a clean user experience using modern tools.",
-    image: "https://via.placeholder.com/300", // Replace with your project image
-    technologies: ["React", "Vite", "CSS Modules"],
-    link: "#", // Replace with your live demo link
-    source: "#", // Replace with your source code link
+      "A modern, responsive portfolio website built with React and Vite. Features include dynamic content loading, smooth animations, dark/light theme switching, and optimized performance metrics.",
+    image: "/Personal.png", // Replace with actual project image
+    technologies: ["React", "Vite", "CSS Modules", "Framer Motion", "React Icons"],
+
+    source: "https://github.com/yourusername/portfolio", // Replace with actual repo link
+    category: "Frontend",
+    status: "live",
+    features: [
+      "Responsive design",
+      "Dark/Light theme toggle",
+      "Smooth page transitions",
+      "Project showcase",
+      "Contact form integration",
+    ],
+    timeline: {
+      start: "June 2023",
+      end: "July 2023",
+      duration: "2 months",
+    },
+  },
+  {
+    id: "project-3",
+    title: "RideEase Car Rental Site",
+    subtitle: "Spring Boot & Thymeleaf",
+    description:
+      "A comprehensive car rental platform with real-time booking system, vehicle management, and secure payment integration. Features include user authentication, vehicle availability tracking, booking management, and automated billing system.",
+    image: "/RideEase.png", // Replace with actual project image
+    technologies: ["Spring Boot", "Thymeleaf", "MySQL", "Bootstrap", "jQuery"],
+    source: "https://github.com/yourusername/rideease", // Replace with actual repo link
+    category: "Web Development",
+    status: "live",
+    features: [
+      "User authentication & role-based access",
+      "Real-time vehicle availability",
+      "Booking management system",
+      "Payment integration",
+      "Admin dashboard",
+    ],
+    timeline: {
+      start: "May 2023",
+      end: "July 2023",
+      duration: "3 months",
+    },
   },
 ];

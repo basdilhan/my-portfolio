@@ -88,9 +88,4 @@
   width: 100% !important; /* Keeps the underline visible for the active link */
 }
 
-.hamburger {
-  display: none; /* Hidden by default, shown on smaller screens */
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
+
