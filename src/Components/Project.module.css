@@ -10,17 +10,24 @@
   gap: 20px;
 }
 
+
 .projectCard {
   background-color: var(--background-light);
   border-radius: 10px;
-  padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  
+  display: flex;
+  flex-direction: column;
 }
 
-.projectCard:hover {
-  transform: translateY(-5px);
+.cardContent {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* This makes the content area fill the space */
 }
+
 
 .image {
   width: 100%;
