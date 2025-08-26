@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './Projects.module.css';
+import styles from './Project.module.css';
 // Import the new data file
-import { projects } from '../../data/projects';
+import { projects } from "../Data/Projects";  
 
 const Projects = () => {
   return (

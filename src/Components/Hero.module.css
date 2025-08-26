@@ -1,23 +1,90 @@
+/* src/components/Hero.module.css */
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  /* --- This is the main change to center the content --- */
+  align-items: center; /* Aligns content to the horizontal center */
+  text-align: center; /* Ensures text within the container is centered */
   min-height: 100vh;
+
+  /* --- New Background Styles --- */
+  /* Replace with your image. Using a placeholder for now. */
+  /* For a local image in the 'public' folder, use: url('/your-image-name.jpg') */
+  background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto-format&fit=crop');
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Creates a cool parallax effect on scroll */
+
+  /* Add a dark overlay so the text is easier to read */
+  position: relative;
+  z-index: 1;
 }
+
+/* This is the dark overlay */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 25, 47, 0.7); /* Dark overlay with 70% opacity */
+  z-index: -1;
+}
+
 
 .title {
   font-size: 4rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  color: var(--text-light);
+  margin-bottom: 10px; /* Reduced margin */
+  color: var(--text-light); /* Set a solid color */
+  
+  /* --- New Neon Glow Effect --- */
+  text-shadow:
+    0 0 5px rgba(100, 255, 218, 0.2), /* Faint outer glow */
+    0 0 10px rgba(100, 255, 218, 0.2);
+  transition: text-shadow 0.3s ease-in-out, transform 0.3s ease; /* Transition shadow and scale */
 }
+
+.title:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  /* --- Brighter glow on hover --- */
+  text-shadow:
+    0 0 10px rgba(100, 255, 218, 0.8), /* Main glow */
+    0 0 20px rgba(100, 255, 218, 0.6), /* Softer outer glow */
+    0 0 30px rgba(100, 255, 218, 0.4);
+}
+
+/* --- New Subtitle Style --- */
+.subtitle {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+  margin-bottom: 25px;
+}
+
 
 .description {
   font-size: 1.5rem;
   color: var(--text-dark);
   max-width: 600px;
   margin-bottom: 40px;
+
+  /* --- New Hover Styles --- */
+  transition: color 0.3s ease-in-out; /* Smoothly transition the color change */
+}
+
+.description:hover {
+  color: var(--text-light); /* Brightens the text on hover */
+}
+
+
+.buttonContainer {
+  display: flex;
+  gap: 20px;
 }
 
 .contactBtn {
@@ -30,4 +97,35 @@
 
 .contactBtn:hover {
   background-color: rgba(100, 255, 218, 0.1);
+}
+
+.outlineBtn {
+  background-color: transparent;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  padding: 15px 30px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.outlineBtn:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* --- New Social Link Styles --- */
+.socials {
+  margin-top: 25px;
+  display: flex;
+  gap: 25px;
+}
+
+.socialLink {
+  color: var(--text-dark);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialLink:hover {
+  color: var(--secondary-color);
+  transform: translateY(-5px); /* Lifts the icon up on hover */
 }
