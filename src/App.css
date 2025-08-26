@@ -1,32 +1,36 @@
-/* src/App.css */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Import a modern font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 
+/* Define your color scheme and fonts using CSS variables */
 :root {
-  --primary-color: #0a192f;
-  --secondary-color: #64ffda;
-  --text-light: #ccd6f6;
-  --text-dark: #8892b0;
-  --background-light: #112240;
+  --primary-color: #0a192f;      /* A very dark blue */
+  --secondary-color: #64ffda;    /* A bright, minty green */
+  --text-light: #ccd6f6;         /* A light, grayish blue */
+  --text-dark: #8892b0;          /* A darker, grayish blue */
+  --background-light: #112240;  /* A slightly lighter dark blue */
+}
+
+/* Apply smooth scrolling and basic styles to the whole page */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Code Pro', monospace;
   background-color: var(--primary-color);
   color: var(--text-light);
 }
 
-h1, h2, h3 {
-  color: var(--text-light);
-}
-
-a {
-  color: var(--secondary-color);
-  text-decoration: none;
-}
-
+/* General styling for all sections */
 section {
   padding: 100px 80px;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+/* Style for links */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
 }

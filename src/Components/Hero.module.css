@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-light);
+}
+
+.description {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.contactBtn {
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  padding: 15px 30px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contactBtn:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+}

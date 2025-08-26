@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.text {
+  max-width: 600px;
+  margin-bottom: 40px;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+}
+
+.emailLink {
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.emailLink:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+.socialLinks {
+  margin-top: 40px;
+  display: flex;
+  gap: 30px;
+}
+
+.socialLinks a {
+  font-size: 1.1rem;
+}
