@@ -1,3 +1,5 @@
+/* src/components/Navbar.module.css */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -6,16 +8,38 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: rgba(10, 25, 47, 0.85);
- -webkit-backdrop-filter: blur(10px); 
+  background-color: rgba(10, 25, 47, 0.95); /* Slightly more opaque for better fallback */
+  /* Modern backdrop filter with fallbacks */
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
   z-index: 10;
   box-sizing: border-box;
+  transition: top 0.3s ease, background-color 0.3s ease; /* For scroll-hide effect if you add it later */
+  will-change: transform, backdrop-filter; /* Performance optimization */
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+  .navbar {
+    background-color: rgba(10, 25, 47, 0.98); /* More opaque fallback */
+  }
 }
 
 .title {
   font-size: 1.5rem;
   font-weight: bold;
+  color: var(--text-light);
+  transition: color 0.3s ease;
+}
+
+.title:hover {
+  color: var(--secondary-color);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .menuItems {
@@ -28,9 +52,45 @@
 
 .menuItems a {
   font-size: 1.1rem;
+  color: var(--text-dark);
+  text-decoration: none;
+  position: relative; /* Needed for the underline effect */
+  padding-bottom: 5px; /* Space for the underline */
   transition: color 0.3s ease;
 }
 
+/* --- New Underline Hover Effect --- */
+.menuItems a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Starts with no width */
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: width 0.3s ease-in-out; /* Animates the width */
+}
+
 .menuItems a:hover {
-  color: white;
+  color: var(--text-light);
+}
+
+.menuItems a:hover::after {
+  width: 100%; /* Expands to full width on hover */
+}
+
+/* --- New Active Link Style --- */
+.activeLink {
+  color: var(--secondary-color) !important; /* Highlight color for the active link */
+}
+
+.activeLink::after {
+  width: 100% !important; /* Keeps the underline visible for the active link */
+}
+
+.hamburger {
+  display: none; /* Hidden by default, shown on smaller screens */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }

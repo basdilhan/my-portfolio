@@ -5,11 +5,15 @@ const useIntersectionObserver = (setActiveSection) => {
   const sectionRefs = useRef([]);
 
   useEffect(() => {
+    // The Intersection Observer API watches for elements entering the viewport
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          // If an element is intersecting (visible on screen)
           if (entry.isIntersecting) {
+            // Add the 'visible' class for animations
             entry.target.classList.add('visible');
+            // If a function was passed to update the active section, call it with the element's ID
             if (setActiveSection) {
               setActiveSection(entry.target.id);
             }
@@ -21,10 +25,12 @@ const useIntersectionObserver = (setActiveSection) => {
       }
     );
 
+    // Tell the observer to watch each section
     sectionRefs.current.forEach((section) => {
       if (section) observer.observe(section);
     });
 
+    // Clean up by unobserving when the component unmounts
     return () => {
       sectionRefs.current.forEach((section) => {
         if (section) observer.unobserve(section);

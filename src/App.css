@@ -1,16 +1,15 @@
-/* Import a modern font from Google Fonts */
+/* src/App.css */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
-/* Define your color scheme and fonts using CSS variables */
 :root {
-  --primary-color: #0a192f;      /* A very dark blue */
-  --secondary-color: #64ffda;    /* A bright, minty green */
-  --text-light: #ccd6f6;         /* A light, grayish blue */
-  --text-dark: #8892b0;          /* A darker, grayish blue */
-  --background-light: #112240;  /* A slightly lighter dark blue */
+  --primary-color: #0a192f;
+  --secondary-color: #64ffda;
+  --text-light: #ccd6f6;
+  --text-dark: #8892b0;
+  --background-light: #112240;
 }
 
-/* Apply smooth scrolling and basic styles to the whole page */
 html {
   scroll-behavior: smooth;
 }
@@ -22,12 +21,11 @@ body {
   color: var(--text-light);
 }
 
-/* General styling for all sections */
 section {
   padding: 100px 80px;
   max-width: 1000px;
   margin: 0 auto;
- opacity: 0;
+  opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
@@ -36,7 +34,7 @@ section.visible {
   opacity: 1;
   transform: translateY(0);
 }
-/* Style for links */
+
 a {
   color: var(--secondary-color);
   text-decoration: none;

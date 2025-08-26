@@ -1,3 +1,7 @@
+/* src/App.module.css */
+
 .App {
   width: 100%;
+  /* --- FIX: This will contain any overflowing elements and remove the gray bar --- */
+  overflow-x: hidden;
 }
