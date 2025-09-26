@@ -19,7 +19,7 @@ const Contact = () => {
         </a>
         <div className={styles.socials}>
           <a 
-            href="https://github.com/your-username" 
+            href="https://github.com/basdilhan" 
             target="_blank" 
             rel="noopener noreferrer" 
             className={styles.socialLink}

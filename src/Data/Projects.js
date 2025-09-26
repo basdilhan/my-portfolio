@@ -10,7 +10,7 @@ export const projects = [
     image: "/Ipd.png", // Replace with actual project image
     technologies: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "Bootstrap"],
  
-    source: "https://github.com/yourusername/ipd-health", // Replace with actual repo link
+    source: "https://github.com/basdilhan/ipd-health-hub", // Replace with actual repo link
     category: "Web Development",
     status: "live",
     features: [
@@ -21,8 +21,8 @@ export const projects = [
       "Patient portal dashboard",
     ],
     timeline: {
-      start: "January 2023",
-      end: "April 2023",
+      start: "October 2024",
+      end: "April 2025",
       duration: "4 months",
     },
   },
@@ -59,7 +59,7 @@ export const projects = [
       "A comprehensive car rental platform with real-time booking system, vehicle management, and secure payment integration. Features include user authentication, vehicle availability tracking, booking management, and automated billing system.",
     image: "/RideEase.png", // Replace with actual project image
     technologies: ["Spring Boot", "Thymeleaf", "MySQL", "Bootstrap", "jQuery"],
-    source: "https://github.com/yourusername/rideease", // Replace with actual repo link
+    source: "https://github.com/basdilhan/ride-ease", // Replace with actual repo link
     category: "Web Development",
     status: "live",
     features: [

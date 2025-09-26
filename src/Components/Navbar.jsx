@@ -33,6 +33,14 @@ const Navbar = ({ activeSection }) => {
               Contact
             </a>
           </li>
+          <li>
+            <a 
+              href="#blog" 
+              className={activeSection === 'blog' ? styles.activeLink : ''}
+            >
+              Blog
+            </a>
+          </li>
         </ul>
        
        

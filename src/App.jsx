@@ -7,6 +7,7 @@ import Hero from './Components/Hero';
 import About from './Components/About';
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
+import Blog from './Components/Blog';
 
 function App() {
   // --- New state to track the active section ---
@@ -25,8 +26,12 @@ function App() {
         <div id="projects" ref={(el) => (sectionRefs.current[2] = el)}><Projects /></div>
         <div id="contact" ref={(el) => (sectionRefs.current[3] = el)}><Contact /></div>
       </main>
+      <div className={styles.container}>
+        <Blog />
+      </div>
     </div>
   );
 }
 
 export default App;
+
