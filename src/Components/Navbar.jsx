@@ -35,10 +35,10 @@ const Navbar = ({ activeSection }) => {
           </li>
           <li>
             <a 
-              href="#blog" 
-              className={activeSection === 'blog' ? styles.activeLink : ''}
+              href="#Services" 
+              className={activeSection === 'Services' ? styles.activeLink : ''}
             >
-              Blog
+             Services
             </a>
           </li>
         </ul>
