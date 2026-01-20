@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="rgba(100,255,218,0.42)"/>
+      <stop offset="50%" stop-color="rgba(100,255,218,0.24)"/>
+      <stop offset="100%" stop-color="rgba(10,25,47,0)"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M0 0 H48 M0 0 V48" stroke="rgba(100,255,218,0.18)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="#0a192f"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+  <circle cx="960" cy="420" r="780" fill="url(#glow)"/>
+  <g stroke="rgba(97,218,251,0.35)" stroke-width="2" fill="none">
+    <polyline points="160,260 240,300 320,260 400,300 480,260"/>
+    <polyline points="1760,820 1680,780 1600,820 1520,780 1440,820"/>
+    <path d="M300 900 C600 780, 900 920, 1200 800"/>
+    <path d="M700 260 C900 380, 1100 300, 1300 420"/>
+  </g>
+  <g fill="rgba(100,255,218,0.35)">
+    <circle cx="480" cy="260" r="3"/>
+    <circle cx="1440" cy="820" r="3"/>
+    <circle cx="1200" cy="800" r="3"/>
+    <circle cx="700" cy="260" r="3"/>
+  </g>
+</svg>

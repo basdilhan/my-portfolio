@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bggrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="100%" stop-color="#0f1f3a"/>
+    </linearGradient>
+    <pattern id="hex" width="60" height="52" patternUnits="userSpaceOnUse" patternTransform="translate(0,0)">
+      <g stroke="rgba(100,255,218,0.08)" stroke-width="1" fill="none">
+        <path d="M30 0 L60 15 L60 37 L30 52 L0 37 L0 15 Z"/>
+      </g>
+    </pattern>
+    <radialGradient id="flare" cx="20%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="rgba(97,218,251,0.22)"/>
+      <stop offset="100%" stop-color="rgba(97,218,251,0)"/>
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bggrad)"/>
+  <rect width="100%" height="100%" fill="url(#hex)"/>
+  <circle cx="450" cy="260" r="500" fill="url(#flare)"/>
+  <g stroke="rgba(100,255,218,0.18)" stroke-width="2" fill="none">
+    <line x1="300" y1="800" x2="600" y2="700"/>
+    <line x1="600" y1="700" x2="900" y2="820"/>
+    <line x1="900" y1="820" x2="1200" y2="680"/>
+    <line x1="1200" y1="680" x2="1500" y2="780"/>
+  </g>
+  <g fill="rgba(97,218,251,0.25)">
+    <circle cx="600" cy="700" r="3"/>
+    <circle cx="900" cy="820" r="3"/>
+    <circle cx="1200" cy="680" r="3"/>
+  </g>
+</svg>

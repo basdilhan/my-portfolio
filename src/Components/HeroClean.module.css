@@ -1,0 +1,168 @@
+/* src/Components/HeroClean.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(rgba(10, 25, 47, 0.6), rgba(10, 25, 47, 0.6)), url('/tech-bg.svg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(100, 255, 218, 0.1), transparent 40%),
+    radial-gradient(circle at 70% 80%, rgba(97, 218, 251, 0.1), transparent 40%);
+  z-index: 0;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.8s ease-out;
+  text-shadow: 0 2px 10px var(--shadow-color);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subtitle {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  font-weight: 600;
+  color: var(--accent-primary);
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.description {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1.2s ease-out 0.4s both;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1.4s ease-out 0.6s both;
+}
+
+.contactBtn,
+.outlineBtn {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contactBtn {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  border: 2px solid var(--accent-primary);
+  box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
+}
+
+.contactBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(100, 255, 218, 0.5);
+}
+
+.outlineBtn {
+  background: transparent;
+  color: var(--accent-primary);
+  border: 2px solid var(--accent-primary);
+}
+
+.outlineBtn:hover {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(100, 255, 218, 0.3);
+}
+
+.socials {
+  margin-top: 3rem;
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1.6s ease-out 0.8s both;
+}
+
+.socialLink {
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  background: rgba(100, 255, 218, 0.05);
+}
+
+.socialLink:hover {
+  color: var(--accent-primary);
+  transform: translateY(-5px) scale(1.1);
+  border-color: var(--accent-primary);
+  box-shadow: 0 5px 20px rgba(100, 255, 218, 0.3);
+}
+
+@media (max-width: 768px) {
+  .buttonContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .contactBtn,
+  .outlineBtn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
