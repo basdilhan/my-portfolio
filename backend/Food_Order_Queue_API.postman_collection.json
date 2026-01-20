@@ -1,0 +1,236 @@
+{
+  "info": {
+    "name": "Food Order Queue API",
+    "description": "Complete API collection for testing all linked list operations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "health"]
+        }
+      }
+    },
+    {
+      "name": "1. View All Orders (Traverse)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "orders"]
+        }
+      }
+    },
+    {
+      "name": "2. Create Normal Order (Insert at End)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customerName\": \"John Doe\",\n  \"items\": [\n    {\"name\": \"Burger\", \"quantity\": 2, \"price\": 8.99},\n    {\"name\": \"Fries\", \"quantity\": 1, \"price\": 3.99}\n  ],\n  \"totalAmount\": 21.97,\n  \"prepTime\": 15\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "orders"]
+        }
+      }
+    },
+    {
+      "name": "3. Create VIP Order (Insert at Front)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customerName\": \"Jane VIP\",\n  \"items\": [\n    {\"name\": \"Premium Steak\", \"quantity\": 1, \"price\": 29.99}\n  ],\n  \"totalAmount\": 29.99,\n  \"prepTime\": 20\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/orders/vip",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "orders", "vip"]
+        }
+      }
+    },
+    {
+      "name": "4. Create Fast Order (Sorted Insert)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customerName\": \"Quick Order\",\n  \"items\": [\n    {\"name\": \"Hot Dog\", \"quantity\": 1, \"price\": 4.99}\n  ],\n  \"totalAmount\": 4.99,\n  \"prepTime\": 5\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/orders/fast",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "orders", "fast"]
+        }
+      }
+    },
+    {
+      "name": "5. Complete Order (Delete from Front)",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/orders/complete",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "orders", "complete"]
+        }
+      }
+    },
+    {
+      "name": "6. Search Order by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/orders/:orderId",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "orders", ":orderId"],
+          "variable": [
+            {
+              "key": "orderId",
+              "value": "ORD12345"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "7. Cancel Order (Delete by ID)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/orders/:orderId",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "orders", ":orderId"],
+          "variable": [
+            {
+              "key": "orderId",
+              "value": "ORD12345"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "8. Hold Order (Move to End)",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/orders/:orderId/hold",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "orders", ":orderId", "hold"],
+          "variable": [
+            {
+              "key": "orderId",
+              "value": "ORD12345"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "9. Reverse Queue",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/orders/reverse",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "orders", "reverse"]
+        }
+      }
+    },
+    {
+      "name": "10. Peek Next Order",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/orders/peek/next",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "orders", "peek", "next"]
+        }
+      }
+    },
+    {
+      "name": "11. Get Statistics",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/orders/stats/summary",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "orders", "stats", "summary"]
+        }
+      }
+    },
+    {
+      "name": "12. Clear Queue",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "orders"]
+        }
+      }
+    }
+  ]
+}
