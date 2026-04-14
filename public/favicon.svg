@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="#0a192f"/>
+  <!-- Accent border -->
+  <rect x="2" y="2" width="60" height="60" rx="10" fill="none" stroke="#64ffda" stroke-width="2" opacity="0.4"/>
+  <!-- Letter S -->
+  <text
+    x="11"
+    y="46"
+    font-family="'Segoe UI', 'Arial', sans-serif"
+    font-weight="800"
+    font-size="36"
+    fill="#64ffda"
+    letter-spacing="-1"
+  >SD</text>
+</svg>
