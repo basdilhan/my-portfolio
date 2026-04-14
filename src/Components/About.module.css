@@ -66,33 +66,19 @@
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  animation: fadeIn 1s ease-out;
+  /* Scroll-reveal: starts hidden */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.content.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .aboutText {
   color: var(--text-secondary);
   padding: 2rem;
-  animation: slideInLeft 0.8s ease-out;
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 .aboutText h3 {
@@ -178,22 +164,17 @@
 
 /* --- Technologies Section Styles --- */
 .techSection {
-  margin-top: 100px;
+  margin-top: 60px;
   padding: 3rem 2rem;
   background: var(--bg-secondary);
   border-radius: 20px;
-  animation: fadeInUp 1s ease-out;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
 }
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.techSection.techRevealed {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .techTitle {
@@ -270,18 +251,6 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  animation: slideInRight 0.8s ease-out;
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 .photoSlideshow {
@@ -310,6 +279,31 @@
 
 .slideshowImage.active {
   opacity: 1;
+}
+
+/* Slideshow dot indicators */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: -0.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-primary);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.dot.dotActive {
+  background: var(--accent-primary);
+  box-shadow: 0 0 8px rgba(100, 255, 218, 0.6);
+  transform: scale(1.2);
 }
 
 @media (max-width: 768px) {

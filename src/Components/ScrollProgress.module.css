@@ -1,0 +1,18 @@
+.bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #64ffda, #61dafb, #64ffda);
+  background-size: 200% 100%;
+  animation: shimmerBar 2s linear infinite;
+  z-index: 9999;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.7), 0 0 20px rgba(100, 255, 218, 0.4);
+  transition: width 0.1s linear;
+}
+
+@keyframes shimmerBar {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

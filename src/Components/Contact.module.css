@@ -50,23 +50,27 @@
 
 .formGroup {
   margin-bottom: 25px;
+  position: relative;
 }
 
 .formGroup label {
   display: block;
-  color: var(--text-primary);
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 8px;
+  color: var(--accent-primary);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
 .formGroup input,
 .formGroup textarea {
   width: 100%;
-  padding: 12px 16px;
+  padding: 14px 16px;
   background: rgba(10, 25, 47, 0.6);
   border: 1px solid rgba(100, 255, 218, 0.2);
-  border-radius: 8px;
+  border-radius: 10px;
   color: var(--text-primary);
   font-size: 15px;
   font-family: inherit;
@@ -77,12 +81,13 @@
 .formGroup textarea:focus {
   outline: none;
   border-color: var(--accent-primary);
-  box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.1);
+  box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.12), inset 0 0 20px rgba(100,255,218,0.03);
+  background: rgba(10, 25, 47, 0.8);
 }
 
 .formGroup input::placeholder,
 .formGroup textarea::placeholder {
-  color: rgba(230, 241, 255, 0.3);
+  color: rgba(230, 241, 255, 0.25);
 }
 
 .formGroup textarea {
@@ -92,31 +97,51 @@
 
 .submitBtn {
   width: 100%;
-  padding: 14px 28px;
+  padding: 15px 28px;
   background: var(--accent-primary);
   color: var(--bg-primary);
   border: 2px solid var(--accent-primary);
-  border-radius: 8px;
+  border-radius: 50px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.05em;
+}
+
+.submitBtn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: inherit;
+  transform: scale(0);
+  opacity: 1;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.submitBtn:active::after {
+  transform: scale(3);
+  opacity: 0;
 }
 
 .submitBtn:hover {
   background: transparent;
   color: var(--accent-primary);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(100, 255, 218, 0.3);
+  box-shadow: 0 12px 30px rgba(100, 255, 218, 0.35);
 }
 
 .submitBtn:disabled {
-  opacity: 0.7;
+  opacity: 0.6;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .successMessage {

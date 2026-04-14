@@ -1,0 +1,25 @@
+.cursorDot,
+.cursorRing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 50%;
+}
+
+.cursorDot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-primary);
+  /* The x/y offset is handled in React to center perfectly */
+}
+
+.cursorRing {
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid var(--accent-primary);
+  /* Use margins to offset the 30px ring relative to top/left zero */
+  margin-left: -11px;
+  margin-top: -11px;
+}

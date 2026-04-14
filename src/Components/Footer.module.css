@@ -1,9 +1,21 @@
 .footer {
-  background: linear-gradient(rgba(10, 25, 47, 0.95), rgba(10, 25, 47, 0.95)), url('/tech-bg.svg');
+  background: linear-gradient(rgba(10, 25, 47, 0.98), rgba(10, 25, 47, 0.98)), url('/tech-bg.svg');
   background-size: cover;
   background-attachment: fixed;
   padding: 60px 20px 20px;
-  border-top: 1px solid rgba(100, 255, 218, 0.2);
+  position: relative;
+}
+
+/* Gradient top divider */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-primary), rgba(97,218,251,0.8), var(--accent-primary), transparent);
+  box-shadow: 0 0 12px rgba(100,255,218,0.4);
 }
 
 .container {
@@ -60,18 +72,28 @@
 
 .socials {
   display: flex;
-  gap: 15px;
+  gap: 12px;
 }
 
 .socials a {
   color: rgba(230, 241, 255, 0.6);
   transition: all 0.3s ease;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  background: rgba(100, 255, 218, 0.04);
 }
 
 .socials a:hover {
   color: var(--accent-primary);
-  transform: translateY(-3px);
+  transform: translateY(-4px) scale(1.1);
+  border-color: var(--accent-primary);
+  box-shadow: 0 6px 20px rgba(100, 255, 218, 0.3);
+  background: rgba(100, 255, 218, 0.1);
 }
 
 .bottom {

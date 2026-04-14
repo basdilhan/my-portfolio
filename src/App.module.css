@@ -4,4 +4,47 @@
   width: 100%;
   /* --- FIX: This will contain any overflowing elements and remove the gray bar --- */
   overflow-x: hidden;
+  position: relative;
+}
+
+.ambientGlowPrimary,
+.ambientGlowSecondary {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(120px);
+  opacity: 0.15;
+}
+
+.ambientGlowPrimary {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(100, 255, 218, 0.8) 0%, rgba(100, 255, 218, 0) 70%);
+  top: -100px;
+  right: -100px;
+  animation: floatPrimary 20s ease-in-out infinite alternate;
+}
+
+.ambientGlowSecondary {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(97, 218, 251, 0.8) 0%, rgba(97, 218, 251, 0) 70%);
+  bottom: -150px;
+  left: -150px;
+  animation: floatSecondary 25s ease-in-out infinite alternate;
+}
+
+@keyframes floatPrimary {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.15; }
+  33% { transform: translate(-60px, 80px) scale(1.2) rotate(45deg); opacity: 0.25; }
+  66% { transform: translate(-30px, 120px) scale(0.9) rotate(90deg); opacity: 0.2; }
+  100% { transform: translate(30px, -20px) scale(1.1) rotate(180deg); opacity: 0.15; }
+}
+
+@keyframes floatSecondary {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.15; }
+  33% { transform: translate(60px, -80px) scale(1.15) rotate(-45deg); opacity: 0.22; }
+  66% { transform: translate(120px, -30px) scale(0.95) rotate(-90deg); opacity: 0.18; }
+  100% { transform: translate(-20px, 30px) scale(1.05) rotate(-180deg); opacity: 0.15; }
 }

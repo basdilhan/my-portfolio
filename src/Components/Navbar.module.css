@@ -2,30 +2,42 @@
 
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: var(--bg-secondary);
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 50px;
+  background: var(--glass-bg, rgba(17, 34, 64, 0.4));
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-color);
-  padding: 1.2rem 3rem;
+  border: 1px solid var(--glass-border, rgba(100, 255, 218, 0.1));
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
   transition: all 0.4s ease;
-  box-shadow: 0 2px 20px var(--shadow-color);
-  animation: slideDown 0.6s ease-out;
+  box-shadow: var(--glass-shadow, 0 8px 32px 0 rgba(0, 0, 0, 0.3));
+  animation: slideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Compact scrolled state */
+.navbar.scrolled {
+  padding: 0.7rem 2rem;
+  background: rgba(10, 25, 47, 0.75);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+  border-color: rgba(100, 255, 218, 0.25);
+  top: 10px;
 }
 
 @keyframes slideDown {
   from {
-    transform: translateY(-100%);
+    top: -100px;
     opacity: 0;
   }
   to {
-    transform: translateY(0);
+    top: 20px;
     opacity: 1;
   }
 }
@@ -78,28 +90,18 @@
   font-weight: 600;
   font-size: 0.95rem;
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.8rem;
   transition: all 0.3s ease;
+  z-index: 1;
 }
 
-.menuItems a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--accent-primary);
-  transition: width 0.3s ease;
-}
-
-.menuItems a:hover {
+/* Base text hover effect */
+.menuItems a:hover,
+.menuItems a.active {
   color: var(--accent-primary);
 }
 
-.menuItems a:hover::after {
-  width: 100%;
-}
+/* The active indicator will be handled by Framer Motion, so we remove the ::after pseudo-element */
 
 @media (max-width: 1024px) {
   .menuBtn {
@@ -137,6 +139,7 @@
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem 1.5rem;
+    width: 95%;
   }
 
   .title {

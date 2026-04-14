@@ -67,6 +67,11 @@ button:focus-visible {
   --secondary-color: #64ffda;
   --secondary-color-rgb: 100, 255, 218;
   --overlay-scrim: rgba(10, 25, 47, 0.85);
+  
+  /* Glassmorphism Variables */
+  --glass-bg: rgba(17, 34, 64, 0.4);
+  --glass-border: rgba(100, 255, 218, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -89,4 +94,29 @@ body {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+}
+
+/* --- Premium Selection --- */
+::selection {
+  background-color: rgba(100, 255, 218, 0.3);
+  color: var(--accent-primary);
+}
+
+/* --- Premium Scrollbar --- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 255, 218, 0.2); 
+  border-radius: 10px;
+  border: 2px solid var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 255, 218, 0.5); 
 }

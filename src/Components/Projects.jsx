@@ -1,49 +1,55 @@
 // src/Components/Projects.jsx
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import styles from './Project.module.css';
 import { projects } from "../Data/Projects";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.2 } }
+};
+
+const cardVariant = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } }
+};
+
 const Projects = () => {
   const list = Array.isArray(projects) ? projects : [];
 
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section ref={sectionRef} className={styles.container} id="projects">
-      <div className={styles.header}>
+    <section className={styles.container} id="projects">
+      <motion.div 
+        className={styles.header}
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <h2 className={styles.sectionTitle}>Featured Projects</h2>
         <p className={styles.subtitle}>
           A selection of work I'm proud of. Built with modern tech and clean code.
         </p>
-      </div>
+      </motion.div>
 
       {!list.length ? (
         <p className={styles.empty}>No projects to display.</p>
       ) : (
-        <div className={styles.grid}>
+        <motion.div 
+          className={styles.grid}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {list.map((project) => (
-            <article key={project.id} className={styles.card}>
+            <motion.article 
+              key={project.id} 
+              className={styles.card}
+              variants={cardVariant}
+              whileHover={{ y: -12, scale: 1.02, transition: { type: "spring", stiffness: 300 } }}
+            >
               <div className={styles.imageWrapper}>
                 <img src={project.image} alt={project.title} className={styles.thumb} />
                 <div className={styles.overlay}></div>
@@ -89,9 +95,9 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-            </article>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
       )}
     </section>
   );

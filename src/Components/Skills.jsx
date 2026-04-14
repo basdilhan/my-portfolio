@@ -1,32 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import styles from './Skills.module.css';
 import { FaCode, FaDatabase, FaServer, FaTools } from 'react-icons/fa';
 
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 } }
+};
+
+const cardVariant = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } }
+};
+
 const Skills = () => {
-  const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-
   const skillCategories = [
     {
       icon: <FaCode />,
@@ -71,19 +58,31 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className={styles.skills} ref={sectionRef}>
+    <section id="skills" className={styles.skills}>
       <div className={styles.container}>
-        <div className={styles.header}>
+        <motion.div 
+          className={styles.header}
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h2>Skills & Expertise</h2>
           <p>Technologies I work with to bring ideas to life</p>
-        </div>
+        </motion.div>
 
-        <div className={styles.grid}>
+        <motion.div 
+          className={styles.grid}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {skillCategories.map((category, index) => (
-            <div 
+            <motion.div 
               key={index} 
-              className={`${styles.category} ${isVisible ? styles.visible : ''}`}
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={styles.category}
+              variants={cardVariant}
             >
               <div className={styles.categoryHeader}>
                 <div className={styles.icon}>{category.icon}</div>
@@ -98,20 +97,20 @@ const Skills = () => {
                       <span className={styles.skillLevel}>{skill.level}%</span>
                     </div>
                     <div className={styles.progressBar}>
-                      <div 
+                      <motion.div 
                         className={styles.progress}
-                        style={{ 
-                          width: isVisible ? `${skill.level}%` : '0%',
-                          transitionDelay: `${(index * 0.1) + (skillIndex * 0.05)}s`
-                        }}
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${skill.level}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1.2, delay: 0.2 + (skillIndex * 0.1), ease: "easeOut" }}
                       />
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

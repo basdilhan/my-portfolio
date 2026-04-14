@@ -11,10 +11,20 @@ import CVSection from "./Components/CVSection";
 import CertificatesGallery from "./Components/CertificatesGallery";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+import ScrollProgress from "./Components/ScrollProgress";
+import ScrollToTop from "./Components/ScrollToTop";
+
+import CustomCursor from "./Components/CustomCursor";
 
 function App() {
   return (
     <div className={styles.App}>
+      {/* Premium ambient glows */}
+      <div className={styles.ambientGlowPrimary} />
+      <div className={styles.ambientGlowSecondary} />
+      
+      <CustomCursor />
+      <ScrollProgress />
       <Navbar />
       <main>
         <section id="hero"><Hero /></section>
@@ -27,6 +37,7 @@ function App() {
         <section id="contact"><Contact /></section>
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

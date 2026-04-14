@@ -65,32 +65,22 @@
 }
 
 .serviceCard {
-  background: var(--bg-secondary);
+  background: var(--glass-bg, rgba(17, 34, 64, 0.4));
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   border-radius: 16px;
   padding: 2.5rem 2rem;
   text-align: center;
-  border: 2px solid var(--border-color);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 10px 30px var(--shadow-color);
+  border: 1px solid var(--glass-border, rgba(100, 255, 218, 0.1));
+  box-shadow: var(--glass-shadow, 0 10px 30px rgba(0,0,0,0.3));
   position: relative;
   overflow: hidden;
-  animation: fadeInUp 0.6s ease-out backwards;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
-.serviceCard:nth-child(1) { animation-delay: 0.1s; }
-.serviceCard:nth-child(2) { animation-delay: 0.2s; }
-.serviceCard:nth-child(3) { animation-delay: 0.3s; }
-.serviceCard:nth-child(4) { animation-delay: 0.4s; }
-
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .serviceCard::before {
@@ -109,10 +99,28 @@
   transform: scaleX(1);
 }
 
+.serviceCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.08), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.7s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.serviceCard:hover::after {
+  left: 150%;
+}
+
 .serviceCard:hover {
-  transform: translateY(-12px);
-  border-color: var(--accent-primary);
-  box-shadow: 0 20px 50px rgba(100, 255, 218, 0.25);
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(100, 255, 218, 0.3);
+  box-shadow: 0 20px 50px rgba(100, 255, 218, 0.2);
 }
 
 .icon {

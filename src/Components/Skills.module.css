@@ -43,20 +43,14 @@
   border: 1px solid rgba(100, 255, 218, 0.2);
   border-radius: 16px;
   padding: 30px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-}
-
-.category.visible {
-  opacity: 1;
-  transform: translateY(0);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
 }
 
 .category:hover {
   border-color: var(--accent-primary);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+  box-shadow: 0 15px 40px rgba(100, 255, 218, 0.2);
+  background: rgba(17, 34, 64, 0.85);
+  backdrop-filter: blur(16px);
 }
 
 .categoryHeader {
@@ -110,8 +104,8 @@
 }
 
 .progressBar {
-  height: 8px;
-  background: rgba(100, 255, 218, 0.1);
+  height: 9px;
+  background: rgba(100, 255, 218, 0.08);
   border-radius: 10px;
   overflow: hidden;
   position: relative;
@@ -119,11 +113,13 @@
 
 .progress {
   height: 100%;
-  background: linear-gradient(90deg, var(--accent-primary), #4dd4ac);
+  background: linear-gradient(90deg, #64ffda, #61dafb, #64ffda);
+  background-size: 200% 100%;
   border-radius: 10px;
-  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.4), 0 0 20px rgba(97, 218, 251, 0.2);
+  animation: progressFlow 3s linear infinite;
 }
 
 .progress::after {
@@ -131,16 +127,20 @@
   position: absolute;
   top: 0;
   left: -100%;
-  width: 100%;
+  width: 60%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  animation: shimmer 2s infinite;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shimmer 2s ease-in-out infinite;
 }
 
 @keyframes shimmer {
-  100% {
-    left: 100%;
-  }
+  0%   { left: -60%; }
+  100% { left: 110%; }
+}
+
+@keyframes progressFlow {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 @media (max-width: 768px) {
