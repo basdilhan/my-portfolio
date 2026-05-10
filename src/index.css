@@ -120,3 +120,10 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(100, 255, 218, 0.5); 
 }
+
+/* Ensure inline SVGs and icon components inherit color from text and use currentColor for fills */
+svg,
+svg * {
+  color: inherit;
+  fill: currentColor;
+}
