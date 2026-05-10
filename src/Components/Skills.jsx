@@ -21,9 +21,9 @@ const Skills = () => {
       title: 'Frontend Development',
       skills: [
         { name: 'React.js', level: 90 },
-        { name: 'JavaScript/ES6+', level: 85 },
-        { name: 'HTML5 & CSS3', level: 95 },
-        { name: 'Thymeleaf', level: 75 }
+        { name: 'Vite', level: 85 },
+        { name: 'JavaScript / ES6+', level: 88 },
+        { name: 'HTML5 & CSS3', level: 95 }
       ]
     },
     {
@@ -32,8 +32,8 @@ const Skills = () => {
       skills: [
         { name: 'Java & Spring Boot', level: 88 },
         { name: 'Node.js', level: 80 },
-        { name: 'RESTful APIs', level: 85 },
-        { name: 'Python', level: 80 }
+        { name: 'REST APIs', level: 86 },
+        { name: 'PHP', level: 82 }
       ]
     },
     {
@@ -41,7 +41,7 @@ const Skills = () => {
       title: 'Data Analytics & Databases',
       skills: [
         { name: 'MySQL', level: 85 },
-        { name: 'MongoDB', level: 75 },
+        { name: 'Firebase', level: 80 },
         { name: 'Statistical Analysis', level: 82 },
         { name: 'Data Visualization', level: 85 }
       ]
@@ -50,10 +50,10 @@ const Skills = () => {
       icon: <FaTools />,
       title: 'Analytics Tools & Others',
       skills: [
-        { name: 'Excel / Power BI', level: 85 },
-        { name: 'Python (Pandas, NumPy)', level: 80 },
+        { name: 'Flutter', level: 80 },
+        { name: 'Figma', level: 82 },
         { name: 'Git & GitHub', level: 90 },
-        { name: 'IoT Integration', level: 75 }
+        { name: 'IoT / MQTT', level: 75 }
       ]
     }
   ];
@@ -68,8 +68,8 @@ const Skills = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2>Skills & Expertise</h2>
-          <p>Technologies I work with to bring ideas to life</p>
+          <h2>Skills</h2>
+          <p>A focused view of the technologies I use most often</p>
         </motion.div>
 
         <motion.div 

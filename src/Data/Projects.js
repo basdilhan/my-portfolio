@@ -6,7 +6,7 @@ export const projects = [
     title: "Personal Finance Manager",
     subtitle: "Android Mobile Application",
     description:
-      "A beginner-friendly Android app built with Java and Material Design 3 for managing personal finances, bill reminders, and savings goals. Features email validation, intent-based navigation, and Firebase integration with clean card-based layouts.",
+      "A clean Android app for tracking expenses, reminders, and savings goals. Built with Java, Firebase, and Material Design 3 for a simple and reliable mobile experience.",
     tech: ["Java", "Android", "Firebase", "Material Design 3", "Gradle"],
     github: "https://github.com/basdilhan/Personal-finance-management-app",
     demo: "",
@@ -17,7 +17,7 @@ export const projects = [
     title: "DW Market Basket Analysis",
     subtitle: "Data Warehouse & ETL Pipeline",
     description:
-      "End-to-end data warehousing project implementing ETL pipelines for market basket analysis. Includes data cleaning, transformation, and loading into an Azure Data Warehouse with Jupyter Notebook-driven analytics and association rule mining.",
+      "An end-to-end data warehousing project for market basket analysis with ETL, data cleaning, and notebook-driven insights.",
     tech: ["Python", "Jupyter Notebook", "SQL", "ETL", "Data Warehouse"],
     github: "https://github.com/basdilhan/DW_MarketBasket",
     demo: "",
@@ -28,7 +28,7 @@ export const projects = [
     title: "IPD Health Hub",
     subtitle: "Hospital IPD Management System",
     description:
-      "End-to-end inpatient management platform covering admissions, doctor scheduling, prescriptions, billing, pharmacy, lab orders, and reporting. Built with a focus on data consistency and staff workflow efficiency.",
+      "A hospital inpatient management system covering admissions, scheduling, prescriptions, billing, pharmacy, lab orders, and reporting.",
     tech: ["PHP", "MySQL", "Bootstrap", "jQuery"],
     github: "https://github.com/basdilhan/ipd-health-hub",
     demo: "",
@@ -39,8 +39,8 @@ export const projects = [
     title: "RideEase",
     subtitle: "Full Stack Car Rental Platform",
     description:
-      "Complete car rental platform with Spring Boot backend REST APIs and Thymeleaf-based responsive frontend. Features secure authentication, car inventory management, real-time availability, and booking workflows with layered architecture.",
-    tech: ["Spring Boot", "Java", "MySQL", "HTML5", "Thymeleaf"],
+      "A car rental platform with a Spring Boot REST backend and responsive Thymeleaf frontend for booking, inventory, and availability management.",
+    tech: ["Spring Boot", "Java", "MySQL", "Thymeleaf", "REST APIs"],
     github: "https://github.com/basdilhan/ride-ease",
     demo: "",
     image: "/RideEase.png"
@@ -50,7 +50,7 @@ export const projects = [
     title: "Tea Weighing & Brewing System",
     subtitle: "Smart IoT Tea Weigher Controller",
     description:
-      "Flutter app to control and monitor an IoT-enabled tea weighing system. Real-time updates, device control with cloud connectivity via Firebase and MQTT protocol.",
+      "A Flutter app for controlling and monitoring an IoT tea weighing system with real-time updates and cloud connectivity.",
     tech: ["Flutter", "Dart", "Firebase", "MQTT"],
     github: "https://github.com/basdilhan/iot_tea_pro",
     demo: "",
@@ -61,7 +61,7 @@ export const projects = [
     title: "ML Solar Manage",
     subtitle: "Machine Learning Solar Optimization",
     description:
-      "A machine learning project focused on managing and optimizing solar energy systems using data-driven predictions and intelligent energy forecasting models.",
+      "A machine learning project that uses data analysis and forecasting to optimize solar energy planning.",
     tech: ["Python", "Jupyter", "Machine Learning", "Data Analytics"],
     github: "https://github.com/basdilhan/Ml_SolarManage",
     demo: "",
@@ -72,7 +72,7 @@ export const projects = [
     title: "Chef Flow",
     subtitle: "Culinary Management System",
     description:
-      "A web application for managing restaurant and chef workflows, streamlining order processing, menu management, and kitchen coordination with an intuitive interface.",
+      "A restaurant workflow system for order handling, menu management, and kitchen coordination.",
     tech: ["HTML", "CSS", "JavaScript", "PHP"],
     github: "https://github.com/basdilhan/ChefFlow",
     demo: "",
@@ -83,7 +83,7 @@ export const projects = [
     title: "Developer Portfolio",
     subtitle: "Personal Brand & Case Studies",
     description:
-      "High-performance, responsive portfolio highlighting engineering work, services, and projects. Built with Vite + React featuring custom animations, dark mode, glassmorphism effects, and smooth scroll interactions.",
+      "A responsive portfolio built with React and Vite to present projects, services, and professional experience in a simple, polished layout.",
     tech: ["React", "Vite", "CSS Modules", "Framer Motion"],
     github: "https://github.com/basdilhan/my-portfolio",
     demo: "",

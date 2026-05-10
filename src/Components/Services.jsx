@@ -25,7 +25,7 @@ const Services = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        What I Do
+        Services
       </motion.h2>
       
       <motion.div 
@@ -40,7 +40,7 @@ const Services = () => {
             key={index}
             className={styles.serviceCard}
             variants={cardVariant}
-            whileHover={{ y: -12, scale: 1.02 }}
+            whileHover={{ y: -4, scale: 1.01 }}
           >
             <div className={styles.icon}>{service.icon}</div>
             <h3 className={styles.serviceTitle}>{service.title}</h3>

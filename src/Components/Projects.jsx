@@ -28,9 +28,9 @@ const Projects = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className={styles.sectionTitle}>Featured Projects</h2>
+        <h2 className={styles.sectionTitle}>Projects</h2>
         <p className={styles.subtitle}>
-          A selection of work I'm proud of. Built with modern tech and clean code.
+          A selection of recent work built with practical tools and clean, readable code.
         </p>
       </motion.div>
 
@@ -49,7 +49,7 @@ const Projects = () => {
               key={project.id} 
               className={styles.card}
               variants={cardVariant}
-              whileHover={{ y: -12, scale: 1.02, transition: { type: "spring", stiffness: 300 } }}
+              whileHover={{ y: -4, scale: 1.01, transition: { type: "spring", stiffness: 200 } }}
             >
               <div className={styles.imageWrapper}>
                 <img src={project.image} alt={project.title} className={styles.thumb} />

@@ -3,27 +3,27 @@ export const services = [
   {
     iconName: "FaCode",
     title: "Web Development",
-    description: "I build responsive, high-performance websites from scratch using modern technologies like React and Node.js.",
+    description: "I build responsive websites with React and Node.js, focusing on clarity, speed, and maintainability.",
   },
   {
     iconName: "FaPaintBrush",
     title: "UI/UX Design",
-    description: "I create intuitive and visually appealing user interfaces that provide a great user experience, often using tools like Figma.",
+    description: "I design simple, intuitive interfaces with Figma and a strong focus on usability and visual hierarchy.",
   },
   {
     iconName: "FaMobileAlt",
     title: "Mobile App Development",
-    description: "I have experience developing cross-platform mobile applications using frameworks like Flutter.",
+    description: "I develop cross-platform mobile apps with Flutter for practical and polished user experiences.",
   },
   {
     iconName: "FaChartBar",
     title: "Data Analytics",
-    description: "I analyze data to uncover insights, create visualizations, and build dashboards using Python, Excel, and BI tools.",
+    description: "I analyze data to uncover insights and build clear visualizations and dashboards with Python and BI tools.",
   },
   {
     iconName: "FaCalculator",
     title: "Statistical Analysis",
-    description: "I perform statistical analysis, hypothesis testing, and predictive modeling to support data-driven decision making.",
+    description: "I use statistical analysis and predictive modeling to support practical, data-driven decisions.",
   },
 ];
 

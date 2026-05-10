@@ -47,17 +47,18 @@ const About = () => {
   }, [photos.length]);
 
   const techs = [
-    { icon: <FaReact size={50} />,        label: 'React'       },
-    { icon: <FaNodeJs size={50} />,       label: 'Node.js'     },
-    { icon: <IoLogoJavascript size={50}/>,label: 'JavaScript'  },
-    { icon: <FaPhp size={50} />,          label: 'PHP'         },
-    { icon: <SiSpringboot size={50} />,   label: 'Spring Boot' },
-    { icon: <FaLeaf size={50} />,         label: 'Thymeleaf'   },
-    { icon: <SiFlutter size={50} />,      label: 'Flutter'     },
-    { icon: <SiArduino size={50} />,      label: 'Arduino'     },
-    { icon: <FaHtml5 size={50} />,        label: 'HTML5'       },
-    { icon: <FaCss3Alt size={50} />,      label: 'CSS3'        },
-    { icon: <FaFigma size={50} />,        label: 'Figma'       },
+    { icon: <FaReact size={46} />, label: 'React' },
+    { icon: <FaNodeJs size={46} />, label: 'Node.js' },
+    { icon: <IoLogoJavascript size={46} />, label: 'JavaScript' },
+    { icon: <FaPhp size={46} />, label: 'PHP' },
+    { icon: <SiSpringboot size={46} />, label: 'Spring Boot' },
+    { icon: <FaLeaf size={46} />, label: 'Thymeleaf' },
+    { icon: <SiFlutter size={46} />, label: 'Flutter' },
+    { icon: <SiArduino size={46} />, label: 'IoT / Arduino' },
+    { icon: <FaHtml5 size={46} />, label: 'HTML5' },
+    { icon: <FaCss3Alt size={46} />, label: 'CSS3' },
+    { icon: <FaFigma size={46} />, label: 'Figma' },
+    { icon: <FaCode size={46} />, label: 'REST APIs' },
   ];
 
   return (
@@ -69,7 +70,7 @@ const About = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        WHO AM I?
+        About Me
       </motion.h2>
 
       {/* Main content grid */}
@@ -81,23 +82,15 @@ const About = () => {
         className={styles.content}
       >
         <div className={styles.aboutText}>
-          <h3>Hey there! 👋 I'm Samudu Dilhan, a passionate developer from Sri Lanka.</h3>
+          <h3>I'm Samudu Dilhan, a developer focused on simple, reliable digital products.</h3>
           <p>
-            I love crafting modern web and mobile applications, with a huge enthusiasm for building impactful
-            solutions for the future. Beyond development, I'm passionate about data analytics and
-            statistics—uncovering patterns, telling data stories, and making data-driven decisions. I often dive
-            deep into areas like Machine Learning (ML), Artificial Intelligence (AI), and data visualization.
+            I build web and mobile applications with a focus on clarity, usability, and maintainable code. My recent work combines React, Spring Boot, Flutter, PHP, and data analytics.
           </p>
           <p>
-            Beyond the screen, I'm passionate about exploring new places and capturing moments through
-            photography 📸. I believe that creativity fuels innovation, and I'm always looking for new experiences
-            to draw inspiration from. When I'm not coding, you can find me listening to music 🎧, planning my
-            next adventure, or simply enjoying the vibrant culture of Sri Lanka.
+            I also enjoy UI design, IoT projects, and data analysis. Outside development, I like photography and learning tools that help me ship better products.
           </p>
           <p>
-            Currently, I'm pursuing my studies in Software Engineering. Always hungry to learn, I'm on a journey
-            to push boundaries and build amazing things. Let's connect and explore the world of innovation
-            together! ✨
+            I'm currently continuing my studies in Software Engineering and always looking for the next useful thing to build.
           </p>
         </div>
 
@@ -155,14 +148,14 @@ const About = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        <h3 className={styles.techTitle}>Technologies I Use</h3>
+        <h3 className={styles.techTitle}>Technologies I Use Most</h3>
         <div className={styles.techGrid}>
           {techs.map(({ icon, label }) => (
             <motion.div
               key={label}
               className={styles.techItem}
               variants={itemVariant}
-              whileHover={{ scale: 1.15, rotate: 360, transition: { duration: 0.6 } }}
+              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
             >
               {icon}
               <p>{label}</p>

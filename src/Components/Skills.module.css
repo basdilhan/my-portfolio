@@ -5,7 +5,6 @@
   padding: 100px 20px;
   background: linear-gradient(rgba(10, 25, 47, 0.6), rgba(10, 25, 47, 0.6)), url('/tech-bg.svg');
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .container {
@@ -23,7 +22,7 @@
   font-size: 42px;
   color: var(--text-primary);
   margin-bottom: 10px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .header p {
@@ -43,12 +42,12 @@
   border: 1px solid rgba(100, 255, 218, 0.2);
   border-radius: 16px;
   padding: 30px;
-  transition: border-color 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .category:hover {
   border-color: var(--accent-primary);
-  box-shadow: 0 15px 40px rgba(100, 255, 218, 0.2);
+  box-shadow: 0 10px 28px rgba(100, 255, 218, 0.12);
   background: rgba(17, 34, 64, 0.85);
   backdrop-filter: blur(16px);
 }
@@ -76,7 +75,7 @@
 .skillsList {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .skill {
@@ -113,34 +112,11 @@
 
 .progress {
   height: 100%;
-  background: linear-gradient(90deg, #64ffda, #61dafb, #64ffda);
-  background-size: 200% 100%;
+  background: linear-gradient(90deg, #64ffda, #61dafb);
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(100, 255, 218, 0.4), 0 0 20px rgba(97, 218, 251, 0.2);
-  animation: progressFlow 3s linear infinite;
-}
-
-.progress::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  animation: shimmer 2s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0%   { left: -60%; }
-  100% { left: 110%; }
-}
-
-@keyframes progressFlow {
-  0%   { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.25);
 }
 
 @media (max-width: 768px) {
