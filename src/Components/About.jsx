@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import styles from './About.module.css';
 import { FaCode, FaPaintBrush, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaFigma, FaPhp, FaLeaf } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
-import { SiSpringboot, SiArduino, SiFlutter } from 'react-icons/si';
+import { SiSpringboot, SiArduino, SiFlutter, SiFirebase, SiBootstrap, SiJquery, SiMqtt, SiVite } from 'react-icons/si';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -48,17 +48,24 @@ const About = () => {
 
   const techs = [
     { icon: <FaReact size={46} />, label: 'React' },
+    { icon: <SiVite size={46} />, label: 'Vite' },
     { icon: <FaNodeJs size={46} />, label: 'Node.js' },
     { icon: <IoLogoJavascript size={46} />, label: 'JavaScript' },
     { icon: <FaPhp size={46} />, label: 'PHP' },
     { icon: <SiSpringboot size={46} />, label: 'Spring Boot' },
+    { icon: <SiBootstrap size={46} />, label: 'Bootstrap' },
     { icon: <FaLeaf size={46} />, label: 'Thymeleaf' },
     { icon: <SiFlutter size={46} />, label: 'Flutter' },
+    { icon: <SiFirebase size={46} />, label: 'Firebase' },
+    { icon: <SiMqtt size={46} />, label: 'MQTT' },
+    { icon: <SiJquery size={46} />, label: 'jQuery' },
     { icon: <SiArduino size={46} />, label: 'IoT / Arduino' },
     { icon: <FaHtml5 size={46} />, label: 'HTML5' },
     { icon: <FaCss3Alt size={46} />, label: 'CSS3' },
     { icon: <FaFigma size={46} />, label: 'Figma' },
     { icon: <FaCode size={46} />, label: 'REST APIs' },
+    { icon: <FaCode size={46} />, label: 'Material Design 3' },
+    { icon: <FaCode size={46} />, label: 'Gradle' },
   ];
 
   return (
