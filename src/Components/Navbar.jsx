@@ -1,5 +1,6 @@
 // src/components/Navbar.jsx
-import React, { useState, useEffect, useRef } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";

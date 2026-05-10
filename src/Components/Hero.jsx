@@ -1,4 +1,5 @@
 // src/components/Hero.jsx
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion';
@@ -65,7 +66,7 @@ function useParticleCanvas(canvasRef) {
       cancelAnimationFrame(animId);
       window.removeEventListener('resize', resize);
     };
-  }, []);
+  }, [canvasRef]);
 }
 
 const staggerContainer = {

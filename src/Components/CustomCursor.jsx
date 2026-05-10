@@ -1,4 +1,5 @@
 // src/Components/CustomCursor.jsx
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import { motion, useSpring, useMotionValue } from 'framer-motion';
 import styles from './CustomCursor.module.css';

@@ -25,16 +25,13 @@ const useIntersectionObserver = (setActiveSection) => {
       }
     );
 
-    // Tell the observer to watch each section
-    sectionRefs.current.forEach((section) => {
-      if (section) observer.observe(section);
-    });
+    // Snapshot the refs to avoid them changing during cleanup
+    const refs = Array.isArray(sectionRefs.current) ? sectionRefs.current.slice() : [];
+    refs.forEach((section) => { if (section) observer.observe(section); });
 
-    // Clean up by unobserving when the component unmounts
+    // Clean up by unobserving the same snapshot
     return () => {
-      sectionRefs.current.forEach((section) => {
-        if (section) observer.unobserve(section);
-      });
+      refs.forEach((section) => { if (section) observer.unobserve(section); });
     };
   }, [setActiveSection]);
 

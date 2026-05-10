@@ -1,4 +1,5 @@
 // src/Components/Projects.jsx
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Project.module.css';
