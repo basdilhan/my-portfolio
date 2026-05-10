@@ -19,7 +19,7 @@ import CustomCursor from "./Components/CustomCursor";
 function App() {
   return (
     <div className={styles.App}>
-      {/* Premium ambient glows */}
+      {/* Premium ambient glows - fixed positioning */}
       <div className={styles.ambientGlowPrimary} />
       <div className={styles.ambientGlowSecondary} />
       
