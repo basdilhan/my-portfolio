@@ -30,8 +30,8 @@
   width: 500px;
   height: 500px;
   background: radial-gradient(circle, rgba(97, 218, 251, 0.8) 0%, rgba(97, 218, 251, 0) 70%);
-  bottom: -150px;
-  left: -150px;
+  top: 60%;
+  left: -200px;
   animation: floatSecondary 25s ease-in-out infinite alternate;
 }
 
