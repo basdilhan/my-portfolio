@@ -48,7 +48,7 @@ const CVSection = () => {
     <div className={styles.container}>
       <div className={styles.header}>
         <h2 className={styles.title}>Experience & Stats</h2>
-        <p className={styles.subtitle}>Professional journey and coding activity</p>
+        <p className={styles.subtitle}>A concise view of the projects, systems, and technologies that shaped my practical experience.</p>
       </div>
 
       <div className={styles.mainGrid}>

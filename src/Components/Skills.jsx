@@ -77,7 +77,7 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
         >
           <h2>Skills</h2>
-          <p>A focused view of the technologies I use most often</p>
+          <p>A clearer look at the tools I use to build polished frontend experiences, reliable backend systems, and mobile-friendly products.</p>
         </motion.div>
 
         <motion.div 

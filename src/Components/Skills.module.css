@@ -3,7 +3,9 @@
   display: flex;
   align-items: center;
   padding: 90px 20px;
-  background: linear-gradient(rgba(10, 25, 47, 0.6), rgba(10, 25, 47, 0.6)), url('/tech-bg.svg');
+  background:
+    linear-gradient(rgba(10, 25, 47, 0.68), rgba(10, 25, 47, 0.68)),
+    url('/tech-bg.svg');
   background-size: cover;
 }
 
@@ -27,8 +29,11 @@
 }
 
 .header p {
-  color: rgba(230, 241, 255, 0.6);
-  font-size: 16px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .grid {
@@ -43,7 +48,7 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(100, 255, 218, 0.2);
   border-radius: 18px;
-  padding: 24px;
+  padding: 26px 24px 24px;
   transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
@@ -59,8 +64,8 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 20px;
-  padding-bottom: 16px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
   border-bottom: 1px solid rgba(100, 255, 218, 0.1);
 }
 
@@ -70,7 +75,7 @@
 }
 
 .categoryHeader h3 {
-  font-size: 1.1rem;
+  font-size: 1.12rem;
   color: var(--text-primary);
   font-weight: 600;
 }
@@ -78,7 +83,7 @@
 .skillsList {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 17px;
 }
 
 .skill {
@@ -91,22 +96,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
 }
 
 .skillName {
   color: var(--text-primary);
-  font-size: 13px;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
 .skillLevel {
   color: var(--accent-primary);
-  font-size: 12px;
+  font-size: 0.8rem;
   font-weight: 600;
 }
 
 .progressBar {
-  height: 8px;
+  height: 10px;
   background: rgba(100, 255, 218, 0.08);
   border-radius: 10px;
   overflow: hidden;
@@ -125,6 +131,10 @@
 @media (max-width: 768px) {
   .header h2 {
     font-size: 32px;
+  }
+
+  .header p {
+    font-size: 0.96rem;
   }
 
   .grid {
