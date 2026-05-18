@@ -8,7 +8,7 @@
   text-align: center;
   min-height: 100vh;
   padding: 2rem;
-  background: linear-gradient(rgba(10, 25, 47, 0.75), rgba(10, 25, 47, 0.75)), url('/tech-bg.svg');
+  background: linear-gradient(rgba(8, 22, 37, 0.82), rgba(8, 22, 37, 0.82)), url('/tech-bg.svg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -22,8 +22,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 25% 20%, rgba(100, 255, 218, 0.12), transparent 40%),
-    radial-gradient(circle at 75% 80%, rgba(97, 218, 251, 0.10), transparent 40%);
+    radial-gradient(circle at 25% 20%, rgba(94, 234, 212, 0.09), transparent 40%),
+    radial-gradient(circle at 75% 80%, rgba(125, 211, 252, 0.08), transparent 40%);
   z-index: 0;
   animation: pulse 8s ease-in-out infinite;
   pointer-events: none;
@@ -46,7 +46,7 @@
 
 /* Accent name color */
 .accent {
-  background: linear-gradient(135deg, #64ffda, #61dafb);
+  background: linear-gradient(135deg, #5eead4, #7dd3fc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -93,7 +93,7 @@
   color: var(--text-secondary);
   max-width: 620px;
   margin-bottom: 2.5rem;
-  line-height: 1.9;
+  line-height: 1.8;
   position: relative;
   z-index: 1;
 }
@@ -144,12 +144,12 @@
   background: var(--accent-primary);
   color: var(--bg-primary);
   border: 2px solid var(--accent-primary);
-  box-shadow: 0 4px 20px rgba(100, 255, 218, 0.35);
+  box-shadow: 0 4px 20px rgba(94, 234, 212, 0.28);
 }
 
 .contactBtn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(100, 255, 218, 0.55);
+  box-shadow: 0 8px 30px rgba(94, 234, 212, 0.45);
 }
 
 .outlineBtn {
@@ -162,7 +162,7 @@
   background: var(--accent-primary);
   color: var(--bg-primary);
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(100, 255, 218, 0.35);
+  box-shadow: 0 8px 30px rgba(94, 234, 212, 0.3);
 }
 
 .socials {
@@ -183,15 +183,15 @@
   height: 52px;
   border-radius: 50%;
   border: 2px solid var(--border-color);
-  background: rgba(100, 255, 218, 0.04);
+  background: rgba(94, 234, 212, 0.04);
 }
 
 .socialLink:hover {
   color: var(--accent-primary);
   transform: translateY(-6px) scale(1.12);
   border-color: var(--accent-primary);
-  box-shadow: 0 8px 25px rgba(100, 255, 218, 0.35);
-  background: rgba(100, 255, 218, 0.08);
+  box-shadow: 0 8px 25px rgba(94, 234, 212, 0.28);
+  background: rgba(94, 234, 212, 0.08);
 }
 
 /* Scroll cue — bouncing chevron */

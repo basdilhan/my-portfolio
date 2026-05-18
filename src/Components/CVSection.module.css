@@ -1,5 +1,5 @@
 .container {
-  padding: 100px 24px;
+  padding: 88px 24px;
   max-width: 1400px;
   margin: 0 auto;
   background: linear-gradient(rgba(10, 25, 47, 0.6), rgba(10, 25, 47, 0.6)), url('/tech-bg.svg');
@@ -11,8 +11,7 @@
 
 .header {
   text-align: center;
-  margin-bottom: 70px;
-  animation: fadeInDown 0.8s ease-out;
+  margin-bottom: 44px;
 }
 
 @keyframes fadeInDown {
@@ -27,8 +26,8 @@
 }
 
 .title {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
@@ -48,7 +47,7 @@
 }
 
 .subtitle {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-secondary);
   font-weight: 400;
 }
@@ -68,10 +67,10 @@
 }
 
 .sectionTitle {
-  font-size: 1.8rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -80,8 +79,8 @@
 .statsRow {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: 1.25rem;
+  margin-bottom: 1.4rem;
 }
 
 .githubLink {
@@ -97,7 +96,7 @@
   background: var(--accent-primary);
   color: var(--bg-primary);
   border: 2px solid var(--accent-primary);
-  border-radius: 10px;
+  border-radius: 999px;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
@@ -115,8 +114,8 @@
 .statCard {
   background: var(--bg-secondary);
   border: 2px solid var(--border-color);
-  border-radius: 16px;
-  padding: 1.5rem;
+  border-radius: 18px;
+  padding: 1.15rem;
   box-shadow: 0 10px 40px var(--shadow-color);
   transition: all 0.4s ease;
   display: flex;
@@ -141,9 +140,9 @@
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.2rem;
   position: relative;
-  padding-left: 2rem;
+  padding-left: 1.8rem;
 }
 
 .timeline::before {
@@ -160,8 +159,8 @@
   position: relative;
   background: var(--bg-secondary);
   border: 2px solid var(--border-color);
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-radius: 16px;
+  padding: 1.15rem 1.2rem;
   transition: all 0.3s ease;
   animation: fadeIn 0.6s ease-out;
 }
@@ -190,27 +189,27 @@
 }
 
 .jobTitle {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-primary);
   margin: 0;
 }
 
 .company {
-  font-size: 1.1rem;
+  font-size: 0.98rem;
   font-weight: 600;
   color: var(--accent-primary);
   margin: 0;
 }
 
 .period {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
   margin: 0;
 }
 
 .jobDesc {
-  font-size: 1rem;
+  font-size: 0.94rem;
   color: var(--text-secondary);
   line-height: 1.7;
   margin: 0.5rem 0;
@@ -225,12 +224,12 @@
 
 .techTag {
   display: inline-block;
-  padding: 4px 12px;
-  background: rgba(100, 255, 218, 0.12);
+  padding: 4px 10px;
+  background: rgba(94, 234, 212, 0.12);
   color: var(--accent-primary);
-  border: 1px solid rgba(100, 255, 218, 0.25);
-  border-radius: 12px;
-  font-size: 0.85rem;
+  border: 1px solid rgba(94, 234, 212, 0.18);
+  border-radius: 999px;
+  font-size: 0.78rem;
   font-weight: 600;
 }
 

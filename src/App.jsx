@@ -15,6 +15,7 @@ import ScrollProgress from "./Components/ScrollProgress";
 import ScrollToTop from "./Components/ScrollToTop";
 
 import CustomCursor from "./Components/CustomCursor";
+import DeviceShowcase from "./Components/DeviceShowcase";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <section id="services"><Services /></section>
         <section id="skills"><Skills /></section>
         <section id="projects"><Projects /></section>
+        <section id="demos"><DeviceShowcase /></section>
         <section id="cv"><CVSection /></section>
         <section id="certificates"><CertificatesGallery /></section>
         <section id="contact"><Contact /></section>

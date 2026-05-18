@@ -20,40 +20,48 @@ const Skills = () => {
       icon: <FaCode />,
       title: 'Frontend Development',
       skills: [
-        { name: 'React.js', level: 90 },
-        { name: 'Vite', level: 85 },
-        { name: 'JavaScript / ES6+', level: 88 },
-        { name: 'HTML5 & CSS3', level: 95 }
+        { name: 'React.js', level: 92 },
+        { name: 'Vite', level: 88 },
+        { name: 'JavaScript / TypeScript', level: 90 },
+        { name: 'HTML5 & CSS3', level: 95 },
+        { name: 'Framer Motion', level: 85 },
+        { name: 'CSS Modules & Responsive Design', level: 92 }
       ]
     },
     {
       icon: <FaServer />,
       title: 'Backend Development',
       skills: [
-        { name: 'Java & Spring Boot', level: 88 },
-        { name: 'Node.js', level: 80 },
-        { name: 'REST APIs', level: 86 },
-        { name: 'PHP', level: 82 }
+        { name: 'Java & Spring Boot', level: 90 },
+        { name: 'Node.js & Express', level: 82 },
+        { name: 'REST APIs & Microservices', level: 88 },
+        { name: 'PHP & Laravel', level: 84 },
+        { name: 'JWT Authentication', level: 87 },
+        { name: 'Database Design & Optimization', level: 86 }
       ]
     },
     {
       icon: <FaDatabase />,
-      title: 'Data Analytics & Databases',
+      title: 'Data & Databases',
       skills: [
-        { name: 'MySQL', level: 85 },
-        { name: 'Firebase', level: 80 },
-        { name: 'Statistical Analysis', level: 82 },
-        { name: 'Data Visualization', level: 85 }
+        { name: 'MySQL & PostgreSQL', level: 88 },
+        { name: 'Firebase Realtime DB', level: 85 },
+        { name: 'Data Analysis & Python', level: 84 },
+        { name: 'ETL Pipelines', level: 82 },
+        { name: 'Statistical Analysis', level: 83 },
+        { name: 'Data Visualization (Jupyter)', level: 84 }
       ]
     },
     {
       icon: <FaTools />,
-      title: 'Analytics Tools & Others',
+      title: 'Mobile & Tools',
       skills: [
-        { name: 'Flutter', level: 80 },
-        { name: 'Figma', level: 82 },
-        { name: 'Git & GitHub', level: 90 },
-        { name: 'IoT / MQTT', level: 75 }
+        { name: 'Flutter & Dart', level: 86 },
+        { name: 'Android Development', level: 84 },
+        { name: 'Git & GitHub Workflows', level: 92 },
+        { name: 'IoT / MQTT Protocols', level: 80 },
+        { name: 'Figma & UI/UX Design', level: 85 },
+        { name: 'Docker & CI/CD', level: 78 }
       ]
     }
   ];

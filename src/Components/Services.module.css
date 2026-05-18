@@ -21,14 +21,13 @@
 }
 
 .title {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 44px;
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  margin-bottom: 34px;
   text-align: center;
   color: var(--text-primary);
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: -0.02em;
   position: relative;
-  animation: fadeInDown 0.6s ease-out;
 }
 
 .title::after {
@@ -57,7 +56,7 @@
 .servicesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  gap: 1.25rem;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
@@ -68,7 +67,7 @@
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   border-radius: 14px;
-  padding: 2rem 1.75rem;
+  padding: 1.35rem 1.25rem;
   text-align: center;
   border: 1px solid var(--glass-border, rgba(100, 255, 218, 0.1));
   box-shadow: var(--glass-shadow, 0 8px 24px rgba(0,0,0,0.24));
@@ -117,7 +116,7 @@
 }
 
 .serviceCard:hover {
-  transform: translateY(-4px) scale(1.01);
+  transform: translateY(-3px) scale(1.005);
   border-color: rgba(100, 255, 218, 0.3);
   box-shadow: 0 12px 30px rgba(100, 255, 218, 0.14);
 }
@@ -134,7 +133,7 @@
 }
 
 .serviceTitle {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--text-primary);
   margin-bottom: 0.75rem;
   font-weight: 600;
@@ -142,8 +141,8 @@
 
 .serviceDescription {
   color: var(--text-secondary);
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 0.96rem;
+  line-height: 1.62;
   font-weight: 400;
 }
 

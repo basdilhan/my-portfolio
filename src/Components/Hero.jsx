@@ -13,8 +13,8 @@ function useParticleCanvas(canvasRef) {
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     let animId;
-    const PARTICLE_COUNT = 70;
-    const MAX_DIST = 130;
+    const PARTICLE_COUNT = 28;
+    const MAX_DIST = 96;
 
     const resize = () => {
       canvas.width  = canvas.offsetWidth;
@@ -40,7 +40,7 @@ function useParticleCanvas(canvasRef) {
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < MAX_DIST) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(100,255,218,${0.15 * (1 - dist / MAX_DIST)})`;
+            ctx.strokeStyle = `rgba(94,234,212,${0.08 * (1 - dist / MAX_DIST)})`;
             ctx.lineWidth = 0.6;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -51,7 +51,7 @@ function useParticleCanvas(canvasRef) {
       particles.forEach(p => {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(100,255,218,0.5)';
+        ctx.fillStyle = 'rgba(94,234,212,0.24)';
         ctx.fill();
         p.x += p.vx;
         p.y += p.vy;
@@ -133,17 +133,17 @@ const Hero = () => {
   // Parallax Setup
   const { scrollY } = useScroll();
   // Move the background slower than scroll, and the content slightly faster
-  const bgY = useTransform(scrollY, [0, 1000], [0, 300]);
-  const contentY = useTransform(scrollY, [0, 1000], [0, -100]);
-  const contentOpacity = useTransform(scrollY, [0, 600], [1, 0]);
+  const bgY = useTransform(scrollY, [0, 1000], [0, 180]);
+  const contentY = useTransform(scrollY, [0, 1000], [0, -60]);
+  const contentOpacity = useTransform(scrollY, [0, 500], [1, 0]);
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
       strings: [
         'Full Stack Developer',
-        'Data Analyst',
-        'Statistics Enthusiast',
+        'UI-Focused Builder',
         'Java & React Engineer',
+        'Data Analytics Enthusiast',
       ],
       typeSpeed: 55,
       backSpeed: 35,
@@ -191,21 +191,19 @@ const Hero = () => {
         </motion.h3>
 
         <motion.p variants={fadeUp} className={styles.description}>
-          I specialize in full-stack web development with Java Spring Boot and React,
-          and I'm equally passionate about data analytics and statistics. I love
-          transforming raw data into actionable insights while building scalable
-          applications.
+          I design and build practical digital products with React, Spring Boot, and mobile technologies.
+          My focus is on clean interfaces, reliable systems, and solutions that help users move faster and businesses work better.
         </motion.p>
 
         <motion.div variants={fadeUp} className={styles.buttonContainer}>
           {/* Continuous pulsing CTA button with Magnetic pull */}
           <MagneticButton
-            animate={{ boxShadow: ['0px 0px 0px rgba(100,255,218,0)', '0px 0px 20px rgba(100,255,218,0.5)', '0px 0px 0px rgba(100,255,218,0)'] }}
+            animate={{ boxShadow: ['0px 0px 0px rgba(94,234,212,0)', '0px 0px 18px rgba(94,234,212,0.42)', '0px 0px 0px rgba(94,234,212,0)'] }}
             className={styles.contactBtn} 
             href="#contact"
           >
             <FaEnvelope />
-            Get In Touch
+            Contact Me
           </MagneticButton>
           
           <MagneticButton 
@@ -213,7 +211,7 @@ const Hero = () => {
             href="#cv"
           >
             <FaDownload />
-            View Experience
+            View CV
           </MagneticButton>
         </motion.div>
 

@@ -50,27 +50,27 @@ button:focus-visible {
 }
 
 :root {
-  --bg-primary: #0a192f;
-  --bg-secondary: rgba(17, 34, 64, 0.95);
-  --bg-tertiary: #0f1f3a;
-  --text-primary: #e6f1ff;
-  --text-secondary: #ccd6f6;
-  --text-muted: #8892b0;
-  --accent-primary: #64ffda;
-  --accent-secondary: #61dafb;
-  --border-color: rgba(100, 255, 218, 0.2);
-  --shadow-color: rgba(0, 0, 0, 0.3);
-  --text-light: #e6f1ff;
-  --text-dark: #ccd6f6;
-  --primary-color: #0a192f;
-  --background-light: #112240;
-  --secondary-color: #64ffda;
-  --secondary-color-rgb: 100, 255, 218;
-  --overlay-scrim: rgba(10, 25, 47, 0.85);
+  --bg-primary: #081625;
+  --bg-secondary: rgba(14, 28, 50, 0.96);
+  --bg-tertiary: #10233d;
+  --text-primary: #eef4ff;
+  --text-secondary: #c5d0e6;
+  --text-muted: #8f9bb3;
+  --accent-primary: #5eead4;
+  --accent-secondary: #7dd3fc;
+  --border-color: rgba(94, 234, 212, 0.16);
+  --shadow-color: rgba(0, 0, 0, 0.32);
+  --text-light: #eef4ff;
+  --text-dark: #c5d0e6;
+  --primary-color: #081625;
+  --background-light: #10233d;
+  --secondary-color: #5eead4;
+  --secondary-color-rgb: 94, 234, 212;
+  --overlay-scrim: rgba(8, 22, 37, 0.88);
   
   /* Glassmorphism Variables */
-  --glass-bg: rgba(17, 34, 64, 0.4);
-  --glass-border: rgba(100, 255, 218, 0.1);
+  --glass-bg: rgba(14, 28, 50, 0.42);
+  --glass-border: rgba(94, 234, 212, 0.1);
   --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -98,7 +98,7 @@ html {
 
 /* --- Premium Selection --- */
 ::selection {
-  background-color: rgba(100, 255, 218, 0.3);
+  background-color: rgba(94, 234, 212, 0.28);
   color: var(--accent-primary);
 }
 
@@ -112,13 +112,13 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(100, 255, 218, 0.2); 
+  background: rgba(94, 234, 212, 0.2); 
   border-radius: 10px;
   border: 2px solid var(--bg-primary);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(100, 255, 218, 0.5); 
+  background: rgba(94, 234, 212, 0.5); 
 }
 
 /* Ensure inline SVGs and icon components inherit color from text and use currentColor for fills */

@@ -89,7 +89,7 @@ const About = () => {
         className={styles.content}
       >
         <div className={styles.aboutText}>
-          <h3>I'm Samudu Dilhan, a developer focused on simple, reliable digital products.</h3>
+          <h3>I'm Samudu Dilhan, a developer who builds polished products with clear purpose.</h3>
           <p>
             I build web and mobile applications with a focus on clarity, usability, and maintainable code. My recent work combines React, Spring Boot, Flutter, PHP, and data analytics.
           </p>
@@ -97,7 +97,7 @@ const About = () => {
             I also enjoy UI design, IoT projects, and data analysis. Outside development, I like photography and learning tools that help me ship better products.
           </p>
           <p>
-            I'm currently continuing my studies in Software Engineering and always looking for the next useful thing to build.
+            I'm currently continuing my studies in Software Engineering and looking for meaningful product work where design and engineering need to work together.
           </p>
         </div>
 
@@ -135,13 +135,13 @@ const About = () => {
           <div className={styles.principles}>
             <motion.div whileHover={{ y: -8 }} className={styles.principleCard}>
               <FaCode size={40} className={styles.icon} />
-              <h4>Clean Code</h4>
-              <p>I believe in writing efficient, scalable, and clean code.</p>
+              <h4>Reliable Build Quality</h4>
+              <p>I write efficient, scalable code with an emphasis on clarity and long-term maintainability.</p>
             </motion.div>
             <motion.div whileHover={{ y: -8 }} className={styles.principleCard}>
               <FaPaintBrush size={40} className={styles.icon} />
-              <h4>Modern Design</h4>
-              <p>I create sleek, responsive, and modern designs.</p>
+              <h4>Thoughtful UI</h4>
+              <p>I create responsive interfaces that feel professional, focused, and easy to use.</p>
             </motion.div>
           </div>
         </div>

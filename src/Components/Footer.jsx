@@ -4,14 +4,25 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaHeart } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const email = 'samudu104@gmail.com';
+  const location = 'Sri Lanka';
+  const githubUrl = 'https://github.com/basdilhan';
+  const linkedInUrl = 'https://www.linkedin.com/in/samudu-dilhan-45907028b/';
 
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.brand}>
+            <span className={styles.eyebrow}>Ready to collaborate</span>
             <h3>Samudu Dilhan</h3>
-            <p>Full Stack Developer | Building digital experiences</p>
+            <p>Full Stack Developer focused on polished interfaces, practical systems, and clear product thinking.</p>
+            <div className={styles.credList}>
+              <span>Location: {location}</span>
+              <a href={`mailto:${email}`}>{email}</a>
+              <a href={linkedInUrl} target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href={githubUrl} target="_blank" rel="noreferrer">GitHub</a>
+            </div>
           </div>
 
           <div className={styles.links}>
@@ -33,13 +44,13 @@ const Footer = () => {
             <div className={styles.linkGroup}>
               <h4>Social</h4>
               <div className={styles.socials}>
-                <a href="https://github.com/basdilhan" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <a href={githubUrl} target="_blank" rel="noreferrer" aria-label="GitHub">
                   <FaGithub size={24} />
                 </a>
-                <a href="https://linkedin.com/in/samudu-dilhan" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <a href={linkedInUrl} target="_blank" rel="noreferrer" aria-label="LinkedIn">
                   <FaLinkedin size={24} />
                 </a>
-                <a href="mailto:samududilhan@gmail.com" aria-label="Email">
+                <a href={`mailto:${email}`} aria-label="Email">
                   <FaEnvelope size={24} />
                 </a>
               </div>
@@ -50,7 +61,7 @@ const Footer = () => {
         <div className={styles.bottom}>
           <p>© {currentYear} Samudu Dilhan. All rights reserved.</p>
           <p className={styles.credit}>
-            Made with <FaHeart className={styles.heart} /> using React & Vite
+            Built with React and Vite <FaHeart className={styles.heart} /> for a clean, fast portfolio experience.
           </p>
         </div>
       </div>

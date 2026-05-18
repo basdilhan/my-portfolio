@@ -16,8 +16,51 @@ const cardVariant = {
   visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } }
 };
 
+const getFallbackLabel = (title) => {
+  if (!title) return 'Project';
+  return title
+    .split(' ')
+    .map((word) => word[0])
+    .join('')
+    .slice(0, 3)
+    .toUpperCase();
+};
+
+const ProjectVisual = ({ project }) => {
+  if (project.image) {
+    return (
+      <div className={styles.imageFrame}>
+        <img
+          src={project.image}
+          alt={project.title}
+          className={styles.thumb}
+          loading="lazy"
+          decoding="async"
+        />
+        {project.imageLabel && (
+          <div className={styles.imageLabel}>
+            <span>{project.imageLabel}</span>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div className={styles.imageFallback}>
+      <div className={styles.fallbackCopy}>
+        <span className={styles.fallbackLabel}>{project.subtitle}</span>
+        <strong>{project.title}</strong>
+        <p>{project.description}</p>
+      </div>
+      <div className={styles.fallbackMark}>{getFallbackLabel(project.title)}</div>
+    </div>
+  );
+};
+
 const Projects = () => {
   const list = Array.isArray(projects) ? projects : [];
+  const orderedProjects = [...list].sort((a, b) => Number(b.featured) - Number(a.featured));
 
   return (
     <section className={styles.container} id="projects">
@@ -28,32 +71,39 @@ const Projects = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
+        <span className={styles.eyebrow}>Selected Work</span>
         <h2 className={styles.sectionTitle}>Projects</h2>
         <p className={styles.subtitle}>
-          A selection of recent work built with practical tools and clean, readable code.
+          A focused set of projects that balance UI polish, functional detail, and real-world problem solving.
         </p>
+        <div className={styles.sectionStats}>
+          <span className={styles.statPill}>{list.length} projects</span>
+          <span className={styles.statPill}>Multi-stack delivery</span>
+          <span className={styles.statPill}>Business and technical projects</span>
+        </div>
       </motion.div>
 
       {!list.length ? (
         <p className={styles.empty}>No projects to display.</p>
       ) : (
-        <motion.div 
-          className={styles.grid}
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-        >
-          {list.map((project) => (
+          <motion.div 
+            className={styles.grid}
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+          >
+            {orderedProjects.map((project) => (
             <motion.article 
               key={project.id} 
-              className={styles.card}
+              className={`${styles.card} ${project.featured ? styles.featuredAccent : ''}`}
               variants={cardVariant}
-              whileHover={{ y: -4, scale: 1.01, transition: { type: "spring", stiffness: 200 } }}
+              whileHover={{ y: -3, scale: 1.005, transition: { type: "spring", stiffness: 180 } }}
             >
-              <div className={styles.imageWrapper}>
-                <img src={project.image} alt={project.title} className={styles.thumb} />
+              <div className={styles.cardVisual}>
+                <ProjectVisual project={project} />
                 <div className={styles.overlay}></div>
+                {project.featured && <span className={styles.featuredBadge}>Featured</span>}
               </div>
 
               <div className={styles.body}>
@@ -61,11 +111,25 @@ const Projects = () => {
                 <h3 className={styles.title}>{project.title}</h3>
                 <p className={styles.description}>{project.description}</p>
 
+                <div className={styles.metaRow}>
+                  {(project.highlights || []).slice(0, 2).map((item) => (
+                    <span key={item} className={styles.metaPill}>{item}</span>
+                  ))}
+                </div>
+
                 <div className={styles.techStack}>
                   {(project.tech || []).map((tech) => (
                     <span key={tech} className={styles.badge}>{tech}</span>
                   ))}
                 </div>
+
+                {(project.highlights && project.highlights.length) && (
+                  <div className={styles.cardHighlights}>
+                    {(project.highlights || []).slice(2,4).map((h) => (
+                      <span key={h} className={styles.highlightPill}>{h}</span>
+                    ))}
+                  </div>
+                )}
 
                 <div className={styles.footer}>
                   <div className={styles.actions}>
@@ -98,7 +162,7 @@ const Projects = () => {
               </div>
             </motion.article>
           ))}
-        </motion.div>
+          </motion.div>
       )}
     </section>
   );
