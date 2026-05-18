@@ -38,7 +38,7 @@ const DeviceShowcase = () => {
                     playsInline
                     poster="/placeholder-mobile.jpg"
                   >
-                    <source src="/demo-mobile.mp4" type="video/mp4" />
+                    <source src="/DreamSaver_vdo.mp4" type="video/mp4" />
                     Your browser doesn't support HTML5 video.
                   </video>
                 </div>
@@ -67,7 +67,7 @@ const DeviceShowcase = () => {
                     loop
                     poster="/placeholder-web.jpg"
                   >
-                    <source src="/demo-web.mp4" type="video/mp4" />
+                    <source src="/Gm_vdo.mp4" type="video/mp4" />
                     Your browser doesn't support HTML5 video.
                   </video>
                 </div>
