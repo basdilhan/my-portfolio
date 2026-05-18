@@ -23,6 +23,7 @@ function App() {
       {/* Premium ambient glows - fixed positioning */}
       <div className={styles.ambientGlowPrimary} />
       <div className={styles.ambientGlowSecondary} />
+      <div className={styles.ambientGlowTertiary} />
       
       <CustomCursor />
       <ScrollProgress />

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
 
 * {
   scroll-behavior: smooth;
@@ -23,7 +23,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -104,21 +104,20 @@ html {
 
 /* --- Premium Scrollbar --- */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-primary); 
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(94, 234, 212, 0.2); 
+  background: linear-gradient(180deg, rgba(94,234,212,0.45), rgba(97,218,251,0.25));
   border-radius: 10px;
-  border: 2px solid var(--bg-primary);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(94, 234, 212, 0.5); 
+  background: linear-gradient(180deg, rgba(94,234,212,0.75), rgba(97,218,251,0.55));
 }
 
 /* Ensure inline SVGs and icon components inherit color from text and use currentColor for fills */

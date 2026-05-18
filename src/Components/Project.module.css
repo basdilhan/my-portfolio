@@ -759,7 +759,7 @@
 
 .cardVisual {
   position: relative;
-  height: 168px;
+  height: 220px;
   overflow: hidden;
   background: linear-gradient(135deg, rgba(100, 255, 218, 0.1), rgba(97, 218, 251, 0.05));
 }

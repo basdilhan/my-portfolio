@@ -7,7 +7,7 @@
   align-items: center;
   text-align: center;
   min-height: 100vh;
-  padding: 2rem;
+  padding: 6rem 2rem 2rem; /* top pad clears fixed navbar */
   background: linear-gradient(rgba(8, 22, 37, 0.82), rgba(8, 22, 37, 0.82)), url('/tech-bg.svg');
   background-size: cover;
   background-position: center;
@@ -250,4 +250,81 @@
     margin: 0 auto;
     justify-content: center;
   }
+}
+
+/* ── Profile Avatar ──────────────────────────────────────── */
+.avatarWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  z-index: 1;
+}
+
+/* Outer container — gradient ring via rotating ::before */
+.avatarRing {
+  position: relative;
+  width: 152px;
+  height: 152px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 36px rgba(94, 234, 212, 0.25),
+    0 0 70px rgba(94, 234, 212, 0.12);
+}
+
+/* The spinning gradient ring */
+.avatarRing::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #5eead4 0%,
+    #7dd3fc 33%,
+    #a78bfa 66%,
+    #5eead4 100%
+  );
+  animation: spinRing 5s linear infinite;
+  z-index: 0;
+}
+
+@keyframes spinRing {
+  to { transform: rotate(360deg); }
+}
+
+/* The photo — sits above the ring via z-index, clipped to circle */
+.avatarImg {
+  position: relative;
+  z-index: 1;
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border: 3px solid var(--bg-primary, #081625); /* gap between photo and ring */
+}
+
+/* Green "available" dot */
+.avatarStatus {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 18px;
+  height: 18px;
+  background: #22c55e;
+  border-radius: 50%;
+  border: 2px solid var(--bg-primary, #081625);
+  z-index: 3;
+  animation: statusPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55); }
+  50%       { box-shadow: 0 0 0 7px rgba(34, 197, 94, 0); }
 }

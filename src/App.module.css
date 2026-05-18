@@ -2,49 +2,66 @@
 
 .App {
   width: 100%;
-  /* --- FIX: This will contain any overflowing elements and remove the gray bar --- */
   overflow-x: hidden;
   position: relative;
 }
 
+/* ── Ambient glow orbs ───────────────────────────────────── */
 .ambientGlowPrimary,
-.ambientGlowSecondary {
+.ambientGlowSecondary,
+.ambientGlowTertiary {
   position: fixed;
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
-  filter: blur(120px);
-  opacity: 0.15;
+  filter: blur(100px);
+  opacity: 0.13;
 }
 
+/* Teal — top right */
 .ambientGlowPrimary {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(94, 234, 212, 0.9) 0%, rgba(94, 234, 212, 0) 70%);
+  top: -180px;
+  right: -180px;
+  animation: floatPrimary 22s ease-in-out infinite alternate;
+}
+
+/* Blue — mid left */
+.ambientGlowSecondary {
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(100, 255, 218, 0.8) 0%, rgba(100, 255, 218, 0) 70%);
-  top: -100px;
-  right: -100px;
-  animation: floatPrimary 20s ease-in-out infinite alternate;
+  background: radial-gradient(circle, rgba(97, 218, 251, 0.85) 0%, rgba(97, 218, 251, 0) 70%);
+  top: 55%;
+  left: -220px;
+  animation: floatSecondary 28s ease-in-out infinite alternate;
 }
 
-.ambientGlowSecondary {
+/* Purple — bottom right (new) */
+.ambientGlowTertiary {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(97, 218, 251, 0.8) 0%, rgba(97, 218, 251, 0) 70%);
-  top: 60%;
-  left: -200px;
-  animation: floatSecondary 25s ease-in-out infinite alternate;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.7) 0%, rgba(167, 139, 250, 0) 70%);
+  bottom: -100px;
+  right: 5%;
+  animation: floatTertiary 18s ease-in-out infinite alternate;
 }
 
 @keyframes floatPrimary {
-  0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.15; }
-  33% { transform: translate(-60px, 80px) scale(1.2) rotate(45deg); opacity: 0.25; }
-  66% { transform: translate(-30px, 120px) scale(0.9) rotate(90deg); opacity: 0.2; }
-  100% { transform: translate(30px, -20px) scale(1.1) rotate(180deg); opacity: 0.15; }
+  0%   { transform: translate(0, 0) scale(1); opacity: 0.13; }
+  50%  { transform: translate(-50px, 80px) scale(1.15); opacity: 0.20; }
+  100% { transform: translate(20px, -20px) scale(1.05); opacity: 0.14; }
 }
 
 @keyframes floatSecondary {
-  0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.15; }
-  33% { transform: translate(60px, -80px) scale(1.15) rotate(-45deg); opacity: 0.22; }
-  66% { transform: translate(120px, -30px) scale(0.95) rotate(-90deg); opacity: 0.18; }
-  100% { transform: translate(-20px, 30px) scale(1.05) rotate(-180deg); opacity: 0.15; }
+  0%   { transform: translate(0, 0) scale(1); opacity: 0.13; }
+  50%  { transform: translate(70px, -60px) scale(1.12); opacity: 0.19; }
+  100% { transform: translate(-20px, 30px) scale(0.95); opacity: 0.13; }
+}
+
+@keyframes floatTertiary {
+  0%   { transform: translate(0, 0) scale(1); opacity: 0.10; }
+  50%  { transform: translate(-40px, -50px) scale(1.18); opacity: 0.16; }
+  100% { transform: translate(30px, 20px) scale(0.92); opacity: 0.10; }
 }

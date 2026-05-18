@@ -89,15 +89,20 @@ const About = () => {
         className={styles.content}
       >
         <div className={styles.aboutText}>
-          <h3>I'm Samudu Dilhan, a developer who builds polished products with clear purpose.</h3>
+          <h3>I'm Samudu Dilhan — full-stack developer, mobile builder, and AI / ML enthusiast.</h3>
           <p>
-            I build web and mobile applications with a focus on clarity, usability, and maintainable code. My recent work combines React, Spring Boot, Flutter, PHP, and data analytics.
+            I craft web applications, native mobile apps, and data-driven tools with a focus on
+            clarity, usability, and code that lasts. My stack spans React, Spring Boot, Flutter,
+            Android (Java), and Python.
           </p>
           <p>
-            I also enjoy UI design, IoT projects, and data analysis. Outside development, I like photography and learning tools that help me ship better products.
+            I have a genuine passion for machine learning and data analytics — from building ETL
+            pipelines and market-basket models to solar-energy forecasting with Python and Jupyter.
+            I love turning messy data into clear, actionable insights.
           </p>
           <p>
-            I'm currently continuing my studies in Software Engineering and looking for meaningful product work where design and engineering need to work together.
+            Currently studying Software Engineering, open to product work where engineering,
+            mobile development, and intelligent systems come together.
           </p>
         </div>
 

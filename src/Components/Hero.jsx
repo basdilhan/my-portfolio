@@ -141,12 +141,14 @@ const Hero = () => {
     const typed = new Typed(typedRef.current, {
       strings: [
         'Full Stack Developer',
-        'UI-Focused Builder',
+        'Mobile App Developer',
+        'AI / ML Enthusiast',
         'Java & React Engineer',
         'Data Analytics Enthusiast',
+        'UI-Focused Builder',
       ],
-      typeSpeed: 55,
-      backSpeed: 35,
+      typeSpeed: 52,
+      backSpeed: 32,
       backDelay: 1800,
       loop: true,
       smartBackspace: true,
@@ -172,6 +174,18 @@ const Hero = () => {
         animate="show"
         style={{ y: contentY, opacity: contentOpacity, position: 'relative', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center' }}
       >
+        {/* ── Profile Photo ── */}
+        <motion.div variants={fadeUp} className={styles.avatarWrapper}>
+          <div className={styles.avatarRing}>
+            <img
+              src="/samudu.jpg"
+              alt="Samudu Dilhan"
+              className={styles.avatarImg}
+            />
+          </div>
+          <span className={styles.avatarStatus} aria-label="Available for work" />
+        </motion.div>
+
         <div className={styles.titleMaskWrapper}>
           {titleWords.map((word, i) => (
             <span key={i} style={{ display: 'inline-block', overflow: 'hidden', marginRight: '0.4em' }}>
@@ -191,8 +205,8 @@ const Hero = () => {
         </motion.h3>
 
         <motion.p variants={fadeUp} className={styles.description}>
-          I design and build practical digital products with React, Spring Boot, and mobile technologies.
-          My focus is on clean interfaces, reliable systems, and solutions that help users move faster and businesses work better.
+          I build full-stack web apps, native mobile experiences, and data-driven solutions with React, Spring Boot, Flutter, and Android.
+          Passionate about AI&nbsp;/ ML, clean interfaces, and products that actually make life easier.
         </motion.p>
 
         <motion.div variants={fadeUp} className={styles.buttonContainer}>

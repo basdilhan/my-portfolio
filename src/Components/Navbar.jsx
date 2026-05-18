@@ -5,7 +5,7 @@ import styles from "./Navbar.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const SECTIONS = ['hero', 'about', 'services', 'skills', 'projects', 'cv', 'certificates', 'contact'];
+const SECTIONS = ['hero', 'about', 'services', 'skills', 'projects', 'demos', 'cv', 'certificates', 'contact'];
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,6 +44,7 @@ const Navbar = () => {
     { href: '#services',     label: 'Services' },
     { href: '#skills',       label: 'Skills' },
     { href: '#projects',     label: 'Projects' },
+    { href: '#demos',        label: 'Demos' },
     { href: '#cv',           label: 'CV' },
     { href: '#certificates', label: 'Certificates' },
     { href: '#contact',      label: 'Contact' },
