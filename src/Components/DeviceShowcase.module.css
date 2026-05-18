@@ -46,16 +46,31 @@
   gap: 1.5rem;
 }
 
+.deviceVisual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1rem;
+}
+
 .deviceContainer h3 {
   font-size: 1.3rem;
   color: var(--text-primary);
-  margin-top: 1rem;
+  margin-top: 0;
   font-weight: 600;
+  position: relative;
+  z-index: 1;
 }
 
 .deviceContainer p {
   font-size: 0.95rem;
   color: var(--text-secondary);
+  position: relative;
+  z-index: 1;
+  margin-top: -0.25rem;
 }
 
 /* Mobile Device Styling */
@@ -181,6 +196,11 @@
   .devicesGrid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .deviceVisual {
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
   }
 
   .mobileDevice {

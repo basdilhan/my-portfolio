@@ -26,24 +26,26 @@ const DeviceShowcase = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className={styles.mobileDevice}>
-              <div className={styles.mobileBezel}>
-                <div className={styles.mobileNotch}></div>
-                <video 
-                  className={styles.mobileScreen}
-                  autoPlay 
-                  muted 
-                  loop 
-                  playsInline
-                  poster="/placeholder-mobile.jpg"
-                >
-                  <source src="/demo-mobile.mp4" type="video/mp4" />
-                  Your browser doesn't support HTML5 video.
-                </video>
+            <div className={styles.deviceVisual}>
+              <div className={styles.mobileDevice}>
+                <div className={styles.mobileBezel}>
+                  <div className={styles.mobileNotch}></div>
+                  <video 
+                    className={styles.mobileScreen}
+                    autoPlay 
+                    muted 
+                    loop 
+                    playsInline
+                    poster="/placeholder-mobile.jpg"
+                  >
+                    <source src="/demo-mobile.mp4" type="video/mp4" />
+                    Your browser doesn't support HTML5 video.
+                  </video>
+                </div>
               </div>
             </div>
             <h3>Mobile App Demo</h3>
-            <p>RideEase - Car Rental Flutter App</p>
+            <p>Dream Saver - Financial Management App</p>
           </motion.div>
 
           {/* Laptop Device Demo */}
@@ -54,21 +56,23 @@ const DeviceShowcase = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className={styles.laptopDevice}>
-              <div className={styles.laptopBezel}>
-                <div className={styles.laptopCam}></div>
-                <video 
-                  className={styles.laptopScreen}
-                  autoPlay 
-                  muted 
-                  loop
-                  poster="/placeholder-web.jpg"
-                >
-                  <source src="/demo-web.mp4" type="video/mp4" />
-                  Your browser doesn't support HTML5 video.
-                </video>
+            <div className={styles.deviceVisual}>
+              <div className={styles.laptopDevice}>
+                <div className={styles.laptopBezel}>
+                  <div className={styles.laptopCam}></div>
+                  <video 
+                    className={styles.laptopScreen}
+                    autoPlay 
+                    muted 
+                    loop
+                    poster="/placeholder-web.jpg"
+                  >
+                    <source src="/demo-web.mp4" type="video/mp4" />
+                    Your browser doesn't support HTML5 video.
+                  </video>
+                </div>
+                <div className={styles.laptopStand}></div>
               </div>
-              <div className={styles.laptopStand}></div>
             </div>
             <h3>Web Demo</h3>
             <p>GM Frontend - Business Product Catalog</p>

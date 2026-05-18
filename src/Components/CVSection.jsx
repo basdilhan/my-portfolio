@@ -10,21 +10,21 @@ const CVSection = () => {
       company: "IPD Health Hub",
       role: "Full Stack Developer",
       period: "2024 - 2025",
-      desc: "Built comprehensive hospital inpatient management platform with PHP, MySQL, and Bootstrap covering admissions, patient scheduling, prescription management, billing cycles, pharmacy orders, and detailed reporting. Implemented role-based access control, real-time data sync, and mobile-responsive dashboards.",
+      desc: "Built a hospital inpatient management system that handled admissions, patient scheduling, prescriptions, billing, pharmacy orders, and reporting in one place. Worked on the database structure, user access roles, dashboard views, and responsive pages so staff could use the system more easily on different screen sizes.",
       tech: ["PHP", "MySQL", "Bootstrap", "jQuery", "REST APIs"]
     },
     {
       company: "RideEase",
       role: "Full Stack Developer",
       period: "2023 - 2024",
-      desc: "Developed complete car rental platform with Spring Boot microservices backend and Thymeleaf-based responsive frontend. Features include secure JWT authentication, real-time inventory management, booking workflows, payment integration, and admin dashboards. Optimized database queries for 40% faster response times.",
+      desc: "Built a car rental platform with booking, vehicle listings, availability tracking, and admin management screens. Developed the Spring Boot backend, connected the database, created the responsive frontend, and added authentication and booking workflows so the system could support real users more reliably.",
       tech: ["Spring Boot", "Java", "MySQL", "Thymeleaf", "REST APIs", "JWT"]
     },
     {
       company: "IoT Tea Weighing System",
       role: "Mobile Developer",
       period: "2023 - 2024",
-      desc: "Created Flutter mobile app for real-time IoT device control and monitoring with live telemetry dashboards. Integrated MQTT protocols for low-latency communication, Firebase cloud for data persistence, and built offline-first capabilities. Achieved 95% uptime in production with 50K+ daily users.",
+      desc: "Created a Flutter mobile app for monitoring and controlling an IoT tea weighing system in real time. Connected the app to MQTT and Firebase, showed live device updates, and built a simple interface so operators could track readings and manage the device more quickly.",
       tech: ["Flutter", "Dart", "Firebase", "MQTT", "IoT", "Cloud Sync"]
     }
   ];
