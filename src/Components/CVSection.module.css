@@ -61,6 +61,35 @@
   gap: 3rem;
 }
 
+.resumeAction {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.resumeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, rgba(100, 255, 218, 0.1), rgba(100, 255, 218, 0.02));
+  color: #64ffda;
+  border: 1px solid rgba(100, 255, 218, 0.3);
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.resumeBtn:hover {
+  transform: translateY(-3px);
+  background: rgba(100, 255, 218, 0.15);
+  border-color: #64ffda;
+  box-shadow: 0 10px 25px rgba(100, 255, 218, 0.25);
+}
+
 .githubSection {
   animation: fadeIn 0.6s ease-out;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./CVSection.module.css";
-import { FaGithub, FaBriefcase, FaGraduationCap } from "react-icons/fa";
+import { FaGithub, FaBriefcase, FaGraduationCap, FaFilePdf } from "react-icons/fa";
 
 const CVSection = () => {
   const githubUsername = "basdilhan"; // Replace with your actual GitHub username
@@ -49,6 +49,17 @@ const CVSection = () => {
       <div className={styles.header}>
         <h2 className={styles.title}>Experience & Stats</h2>
         <p className={styles.subtitle}>A concise view of the projects, systems, and technologies that shaped my practical experience.</p>
+        <div className={styles.resumeAction}>
+          <a 
+            href="/Samudu%20Dilhan%20-%20CV.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={styles.resumeBtn}
+          >
+            <FaFilePdf size={20} />
+            <span>View Full Resume</span>
+          </a>
+        </div>
       </div>
 
       <div className={styles.mainGrid}>

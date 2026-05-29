@@ -1,0 +1,92 @@
+/* Global scroll animation utilities */
+/* Add to index.css or import separately */
+
+/* ── Smooth reveal on scroll ─────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Direction variants */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── Section divider wave ────────────────────────────────── */
+.section-divider {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+.section-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(100,255,218,0.4), transparent);
+}
+
+/* ── Floating decoration dots ────────────────────────────── */
+@keyframes floatUp {
+  0%   { transform: translateY(0) translateX(0); opacity: 0.3; }
+  50%  { transform: translateY(-20px) translateX(10px); opacity: 0.6; }
+  100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+}
+
+@keyframes floatDown {
+  0%   { transform: translateY(0) translateX(0); opacity: 0.2; }
+  50%  { transform: translateY(15px) translateX(-8px); opacity: 0.5; }
+  100% { transform: translateY(0) translateX(0); opacity: 0.2; }
+}
+
+/* ── Glow pulse for interactive elements ─────────────────── */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 5px rgba(100,255,218,0.1); }
+  50%      { box-shadow: 0 0 20px rgba(100,255,218,0.3); }
+}
+
+/* ── Text gradient shimmer ───────────────────────────────── */
+@keyframes textShimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}

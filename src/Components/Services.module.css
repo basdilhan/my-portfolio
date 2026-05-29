@@ -20,9 +20,29 @@
   pointer-events: none;
 }
 
+.headerGroup {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  background: rgba(100, 255, 218, 0.06);
+  color: var(--accent-primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
 .title {
   font-size: clamp(1.9rem, 4vw, 2.7rem);
-  margin-bottom: 34px;
+  margin-bottom: 10px;
   text-align: center;
   color: var(--text-primary);
   font-weight: 700;
@@ -137,6 +157,19 @@
   color: var(--text-primary);
   margin-bottom: 0.75rem;
   font-weight: 600;
+}
+
+.cardGlow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 50% 0%, rgba(100,255,218,0.06) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.serviceCard:hover .cardGlow {
+  opacity: 1;
 }
 
 .serviceDescription {

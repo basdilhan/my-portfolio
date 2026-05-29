@@ -7,11 +7,10 @@
   align-items: center;
   text-align: center;
   min-height: 100vh;
-  padding: 6rem 2rem 2rem; /* top pad clears fixed navbar */
-  background: linear-gradient(rgba(8, 22, 37, 0.82), rgba(8, 22, 37, 0.82)), url('/tech-bg.svg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  padding: 6rem 2rem 2rem;
+  background: radial-gradient(ellipse at 20% 30%, rgba(94,234,212,0.07) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 70%, rgba(125,211,252,0.06) 0%, transparent 50%),
+              #020c1b;
   position: relative;
   overflow: hidden;
 }
