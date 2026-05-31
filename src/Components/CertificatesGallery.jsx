@@ -62,6 +62,18 @@ const certificates = [
     skills: ["Machine Learning", "Python", "Data Science"],
     pdf: null,
     url: "https://www.kaggle.com/learn/certification/samududilhan12/intro-to-machine-learning"
+  },
+  {
+    id: 6,
+    title: "Intermediate Machine Learning",
+    org: "Kaggle",
+    date: "May 31, 2026",
+    category: "Professional",
+    thumb: "/kaggle_intermediate_cert.png",
+    images: null,
+    skills: ["Machine Learning", "Feature Engineering", "Cross-Validation", "XGBoost"],
+    pdf: null,
+    url: "https://www.kaggle.com/learn/certification/samududilhan12/intermediate-machine-learning"
   }
 ];
 
